@@ -63,4 +63,4 @@ jobs:
       run: |
         curl -F file=@android/app/build/outputs/apk/release/app-arm64-v8a-release.apk \
         -F "initial_comment=Master merge: ${{github.event.pull_request.title}}" \
-        -F channels=releases -H "Authorization: Bearer xoxb-435539789060-1260189045088-gSQ6hAgim1nCJklubNqPTP94" https://slack.com/api/files.upload
+        -F channels=releases -H "Authorization: Bearer ${{secrets.SLACKTOKEN}}" https://slack.com/api/files.upload
