@@ -5,7 +5,7 @@ function App() {
   return (
     <SafeAreaView>
       <View>
-        <Text>Hello World - Testing workflow</Text>
+        <Text>Hello World - Testing workflow 2</Text>
       </View>
     </SafeAreaView>
   );
