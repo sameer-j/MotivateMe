@@ -1,13 +1,15 @@
 import React from 'react';
 import { SafeAreaView, Text, View } from 'react-native';
 
+import Layout from './components/Layout';
+
 function App() {
   return (
-    <SafeAreaView>
+    <Layout>
       <View>
-        <Text>Hello World - Testing workflow 2</Text>
+        <Text>Motivate Me App</Text>
       </View>
-    </SafeAreaView>
+    </Layout>
   );
 }
 
