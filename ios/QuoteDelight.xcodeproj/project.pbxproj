@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* MotivateMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MotivateMeTests.m */; };
+		00E356F31AD99517003FC87E /* QuoteDelightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* QuoteDelightTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		497B143A27DBFC71A924C8D0 /* libPods-MotivateMe-MotivateMeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96273FA58593C172E5B1232E /* libPods-MotivateMe-MotivateMeTests.a */; };
+		497B143A27DBFC71A924C8D0 /* libPods-QuoteDelight-QuoteDelightTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96273FA58593C172E5B1232E /* libPods-QuoteDelight-QuoteDelightTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		F62019FA1113C9B0AD432E7D /* libPods-MotivateMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CCEDFA051B4BB3EEE63D7C /* libPods-MotivateMe.a */; };
+		F62019FA1113C9B0AD432E7D /* libPods-QuoteDelight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CCEDFA051B4BB3EEE63D7C /* libPods-QuoteDelight.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,27 +22,27 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = MotivateMe;
+			remoteInfo = QuoteDelight;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* MotivateMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotivateMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* QuoteDelightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuoteDelightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* MotivateMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotivateMeTests.m; sourceTree = "<group>"; };
-		111A8BB51B5B7D2F4E601FB2 /* Pods-MotivateMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotivateMe.release.xcconfig"; path = "Target Support Files/Pods-MotivateMe/Pods-MotivateMe.release.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* MotivateMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotivateMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MotivateMe/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = MotivateMe/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MotivateMe/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MotivateMe/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MotivateMe/main.m; sourceTree = "<group>"; };
-		60CCEDFA051B4BB3EEE63D7C /* libPods-MotivateMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MotivateMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		745DB67118941E002184E43D /* Pods-MotivateMe-MotivateMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotivateMe-MotivateMeTests.release.xcconfig"; path = "Target Support Files/Pods-MotivateMe-MotivateMeTests/Pods-MotivateMe-MotivateMeTests.release.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MotivateMe/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		96273FA58593C172E5B1232E /* libPods-MotivateMe-MotivateMeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MotivateMe-MotivateMeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3C0ED90E9F0E8E2E2618726 /* Pods-MotivateMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotivateMe.debug.xcconfig"; path = "Target Support Files/Pods-MotivateMe/Pods-MotivateMe.debug.xcconfig"; sourceTree = "<group>"; };
-		B740BA67A2D8E03FFF3313C7 /* Pods-MotivateMe-MotivateMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotivateMe-MotivateMeTests.debug.xcconfig"; path = "Target Support Files/Pods-MotivateMe-MotivateMeTests/Pods-MotivateMe-MotivateMeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* QuoteDelightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuoteDelightTests.m; sourceTree = "<group>"; };
+		111A8BB51B5B7D2F4E601FB2 /* Pods-QuoteDelight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuoteDelight.release.xcconfig"; path = "Target Support Files/Pods-QuoteDelight/Pods-QuoteDelight.release.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* QuoteDelight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuoteDelight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = QuoteDelight/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = QuoteDelight/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = QuoteDelight/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = QuoteDelight/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = QuoteDelight/main.m; sourceTree = "<group>"; };
+		60CCEDFA051B4BB3EEE63D7C /* libPods-QuoteDelight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuoteDelight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		745DB67118941E002184E43D /* Pods-QuoteDelight-QuoteDelightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuoteDelight-QuoteDelightTests.release.xcconfig"; path = "Target Support Files/Pods-QuoteDelight-QuoteDelightTests/Pods-QuoteDelight-QuoteDelightTests.release.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = QuoteDelight/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		96273FA58593C172E5B1232E /* libPods-QuoteDelight-QuoteDelightTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuoteDelight-QuoteDelightTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3C0ED90E9F0E8E2E2618726 /* Pods-QuoteDelight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuoteDelight.debug.xcconfig"; path = "Target Support Files/Pods-QuoteDelight/Pods-QuoteDelight.debug.xcconfig"; sourceTree = "<group>"; };
+		B740BA67A2D8E03FFF3313C7 /* Pods-QuoteDelight-QuoteDelightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuoteDelight-QuoteDelightTests.debug.xcconfig"; path = "Target Support Files/Pods-QuoteDelight-QuoteDelightTests/Pods-QuoteDelight-QuoteDelightTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				497B143A27DBFC71A924C8D0 /* libPods-MotivateMe-MotivateMeTests.a in Frameworks */,
+				497B143A27DBFC71A924C8D0 /* libPods-QuoteDelight-QuoteDelightTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,20 +59,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F62019FA1113C9B0AD432E7D /* libPods-MotivateMe.a in Frameworks */,
+				F62019FA1113C9B0AD432E7D /* libPods-QuoteDelight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* MotivateMeTests */ = {
+		00E356EF1AD99517003FC87E /* QuoteDelightTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* MotivateMeTests.m */,
+				00E356F21AD99517003FC87E /* QuoteDelightTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = MotivateMeTests;
+			path = QuoteDelightTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -83,7 +83,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* MotivateMe */ = {
+		13B07FAE1A68108700A75B9A /* QuoteDelight */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -93,16 +93,16 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = MotivateMe;
+			name = QuoteDelight;
 			sourceTree = "<group>";
 		};
 		2B26940A5573975929BFD60D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B3C0ED90E9F0E8E2E2618726 /* Pods-MotivateMe.debug.xcconfig */,
-				111A8BB51B5B7D2F4E601FB2 /* Pods-MotivateMe.release.xcconfig */,
-				B740BA67A2D8E03FFF3313C7 /* Pods-MotivateMe-MotivateMeTests.debug.xcconfig */,
-				745DB67118941E002184E43D /* Pods-MotivateMe-MotivateMeTests.release.xcconfig */,
+				B3C0ED90E9F0E8E2E2618726 /* Pods-QuoteDelight.debug.xcconfig */,
+				111A8BB51B5B7D2F4E601FB2 /* Pods-QuoteDelight.release.xcconfig */,
+				B740BA67A2D8E03FFF3313C7 /* Pods-QuoteDelight-QuoteDelightTests.debug.xcconfig */,
+				745DB67118941E002184E43D /* Pods-QuoteDelight-QuoteDelightTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -112,8 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				60CCEDFA051B4BB3EEE63D7C /* libPods-MotivateMe.a */,
-				96273FA58593C172E5B1232E /* libPods-MotivateMe-MotivateMeTests.a */,
+				60CCEDFA051B4BB3EEE63D7C /* libPods-QuoteDelight.a */,
+				96273FA58593C172E5B1232E /* libPods-QuoteDelight-QuoteDelightTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,9 +128,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* MotivateMe */,
+				13B07FAE1A68108700A75B9A /* QuoteDelight */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* MotivateMeTests */,
+				00E356EF1AD99517003FC87E /* QuoteDelightTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				2B26940A5573975929BFD60D /* Pods */,
@@ -143,8 +143,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* MotivateMe.app */,
-				00E356EE1AD99517003FC87E /* MotivateMeTests.xctest */,
+				13B07F961A680F5B00A75B9A /* QuoteDelight.app */,
+				00E356EE1AD99517003FC87E /* QuoteDelightTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,9 +152,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* MotivateMeTests */ = {
+		00E356ED1AD99517003FC87E /* QuoteDelightTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MotivateMeTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "QuoteDelightTests" */;
 			buildPhases = (
 				EDBACE3A5B031269EB0C2BA3 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -168,14 +168,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = MotivateMeTests;
-			productName = MotivateMeTests;
-			productReference = 00E356EE1AD99517003FC87E /* MotivateMeTests.xctest */;
+			name = QuoteDelightTests;
+			productName = QuoteDelightTests;
+			productReference = 00E356EE1AD99517003FC87E /* QuoteDelightTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* MotivateMe */ = {
+		13B07F861A680F5B00A75B9A /* QuoteDelight */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MotivateMe" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "QuoteDelight" */;
 			buildPhases = (
 				188109A994D6F7E69321E518 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -190,9 +190,9 @@
 			);
 			dependencies = (
 			);
-			name = MotivateMe;
-			productName = MotivateMe;
-			productReference = 13B07F961A680F5B00A75B9A /* MotivateMe.app */;
+			name = QuoteDelight;
+			productName = QuoteDelight;
+			productReference = 13B07F961A680F5B00A75B9A /* QuoteDelight.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -212,7 +212,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MotivateMe" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "QuoteDelight" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -225,8 +225,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* MotivateMe */,
-				00E356ED1AD99517003FC87E /* MotivateMeTests */,
+				13B07F861A680F5B00A75B9A /* QuoteDelight */,
+				00E356ED1AD99517003FC87E /* QuoteDelightTests */,
 			);
 		};
 /* End PBXProject section */
@@ -271,15 +271,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MotivateMe-MotivateMeTests/Pods-MotivateMe-MotivateMeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-QuoteDelight-QuoteDelightTests/Pods-QuoteDelight-QuoteDelightTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MotivateMe-MotivateMeTests/Pods-MotivateMe-MotivateMeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-QuoteDelight-QuoteDelightTests/Pods-QuoteDelight-QuoteDelightTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MotivateMe-MotivateMeTests/Pods-MotivateMe-MotivateMeTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuoteDelight-QuoteDelightTests/Pods-QuoteDelight-QuoteDelightTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		188109A994D6F7E69321E518 /* [CP] Check Pods Manifest.lock */ = {
@@ -297,7 +297,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MotivateMe-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-QuoteDelight-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -310,15 +310,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MotivateMe/Pods-MotivateMe-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-QuoteDelight/Pods-QuoteDelight-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MotivateMe/Pods-MotivateMe-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-QuoteDelight/Pods-QuoteDelight-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MotivateMe/Pods-MotivateMe-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuoteDelight/Pods-QuoteDelight-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8A8E49756E5F7DA63DA4EDBE /* [CP] Copy Pods Resources */ = {
@@ -327,15 +327,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MotivateMe-MotivateMeTests/Pods-MotivateMe-MotivateMeTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-QuoteDelight-QuoteDelightTests/Pods-QuoteDelight-QuoteDelightTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MotivateMe-MotivateMeTests/Pods-MotivateMe-MotivateMeTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-QuoteDelight-QuoteDelightTests/Pods-QuoteDelight-QuoteDelightTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MotivateMe-MotivateMeTests/Pods-MotivateMe-MotivateMeTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuoteDelight-QuoteDelightTests/Pods-QuoteDelight-QuoteDelightTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CC2EDDD38AFD6ABCA1697A87 /* [CP] Embed Pods Frameworks */ = {
@@ -344,15 +344,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MotivateMe/Pods-MotivateMe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-QuoteDelight/Pods-QuoteDelight-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MotivateMe/Pods-MotivateMe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-QuoteDelight/Pods-QuoteDelight-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MotivateMe/Pods-MotivateMe-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuoteDelight/Pods-QuoteDelight-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EDBACE3A5B031269EB0C2BA3 /* [CP] Check Pods Manifest.lock */ = {
@@ -370,7 +370,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MotivateMe-MotivateMeTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-QuoteDelight-QuoteDelightTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -403,7 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* MotivateMeTests.m in Sources */,
+				00E356F31AD99517003FC87E /* QuoteDelightTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +421,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* MotivateMe */;
+			target = 13B07F861A680F5B00A75B9A /* QuoteDelight */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -429,14 +429,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B740BA67A2D8E03FFF3313C7 /* Pods-MotivateMe-MotivateMeTests.debug.xcconfig */;
+			baseConfigurationReference = B740BA67A2D8E03FFF3313C7 /* Pods-QuoteDelight-QuoteDelightTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = MotivateMeTests/Info.plist;
+				INFOPLIST_FILE = QuoteDelightTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,17 +450,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MotivateMe.app/MotivateMe";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuoteDelight.app/QuoteDelight";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 745DB67118941E002184E43D /* Pods-MotivateMe-MotivateMeTests.release.xcconfig */;
+			baseConfigurationReference = 745DB67118941E002184E43D /* Pods-QuoteDelight-QuoteDelightTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = MotivateMeTests/Info.plist;
+				INFOPLIST_FILE = QuoteDelightTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -474,19 +474,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MotivateMe.app/MotivateMe";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuoteDelight.app/QuoteDelight";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3C0ED90E9F0E8E2E2618726 /* Pods-MotivateMe.debug.xcconfig */;
+			baseConfigurationReference = B3C0ED90E9F0E8E2E2618726 /* Pods-QuoteDelight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = MotivateMe/Info.plist;
+				INFOPLIST_FILE = QuoteDelight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -497,7 +497,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = MotivateMe;
+				PRODUCT_NAME = QuoteDelight;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -506,12 +506,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 111A8BB51B5B7D2F4E601FB2 /* Pods-MotivateMe.release.xcconfig */;
+			baseConfigurationReference = 111A8BB51B5B7D2F4E601FB2 /* Pods-QuoteDelight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = MotivateMe/Info.plist;
+				INFOPLIST_FILE = QuoteDelight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,7 +522,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = MotivateMe;
+				PRODUCT_NAME = QuoteDelight;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -654,7 +654,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MotivateMeTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "QuoteDelightTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -663,7 +663,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MotivateMe" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "QuoteDelight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -672,7 +672,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MotivateMe" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "QuoteDelight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

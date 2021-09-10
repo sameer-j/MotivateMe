@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "MotivateMe.app"
-               BlueprintName = "MotivateMe"
-               ReferencedContainer = "container:MotivateMe.xcodeproj">
+               BuildableName = "QuoteDelight.app"
+               BlueprintName = "QuoteDelight"
+               ReferencedContainer = "container:QuoteDelight.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "MotivateMeTests.xctest"
-               BlueprintName = "MotivateMeTests"
-               ReferencedContainer = "container:MotivateMe.xcodeproj">
+               BuildableName = "QuoteDelightTests.xctest"
+               BlueprintName = "QuoteDelightTests"
+               ReferencedContainer = "container:QuoteDelight.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "MotivateMe.app"
-            BlueprintName = "MotivateMe"
-            ReferencedContainer = "container:MotivateMe.xcodeproj">
+            BuildableName = "QuoteDelight.app"
+            BlueprintName = "QuoteDelight"
+            ReferencedContainer = "container:QuoteDelight.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "MotivateMe.app"
-            BlueprintName = "MotivateMe"
-            ReferencedContainer = "container:MotivateMe.xcodeproj">
+            BuildableName = "QuoteDelight.app"
+            BlueprintName = "QuoteDelight"
+            ReferencedContainer = "container:QuoteDelight.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
