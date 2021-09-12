@@ -1,13 +1,14 @@
 import React from 'react';
-import { SafeAreaView, Text, View } from 'react-native';
+import { View } from 'react-native';
 
 import Layout from './components/Layout';
+import Home from './modules/home/components';
 
 function App() {
   return (
     <Layout>
       <View>
-        <Text>Motivate Me App</Text>
+        <Home />
       </View>
     </Layout>
   );
