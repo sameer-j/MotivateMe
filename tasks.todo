@@ -3,10 +3,22 @@ Tasks:
   ✔ App icon @done(21-09-10 22:49)
   ✔ Splash screen @done(21-09-15 21:54)
   ☐ Card
+    ☐ card position
+    ☐ card size
+    ☐ quote icon
+    ☐ category
+    ☐ favorites
   ☐ Buttons for homescreen
+    ☐ listing icon
+    ☐ Next button
+    ☐ share button
+    ☐ settings button
   ✔ Workflow setup, send to slack @done(21-09-07 17:33)
 
 Features: 
   ☐ Show dummy quotes
   ☐ Show quotes from firebase
   ☐ 
+
+Issues:
+  ✔ handle orientation change - locked to portrait @done(21-09-20 20:35)
