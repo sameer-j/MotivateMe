@@ -17,6 +17,8 @@ function QuoteCard({ quote }) {
 const styles = StyleSheet.create({
   quoteIcon: {
     opacity: 0.7,
+    height: 80,
+    width: 70,
   },
   card: {
     minHeight: 50,
@@ -34,6 +36,7 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
     fontSize: 31,
     fontWeight: '500',
+    marginTop: -30,
   },
 });
 
