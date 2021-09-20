@@ -1,7 +1,7 @@
 import React from 'react';
-import { Dimensions, Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 
-const ITEM_WIDTH = Dimensions.get('window').width;
+import { SCREEN_HEIGHT, SCREEN_WIDTH } from '../constants';
 const QUOTE_ICON = require('../assets/quote.png');
 
 function QuoteCard({ quote }) {
@@ -21,15 +21,13 @@ const styles = StyleSheet.create({
     width: 70,
   },
   card: {
-    minHeight: 50,
-    width: ITEM_WIDTH - 40, // 40 because of right and left margins
+    minHeight: SCREEN_HEIGHT * 0.4,
+    width: SCREEN_WIDTH - 40, // 40 because of right and left margins
     borderRadius: 16,
     backgroundColor: 'rgba(255, 255, 255, 0.67)',
     padding: 20,
-    marginRight: 20,
-    marginLeft: 20,
-    marginTop: 40,
-    marginBottom: 50,
+    marginHorizontal: 20,
+    marginVertical: 40,
   },
   quote: {
     fontFamily: 'Roboto',
