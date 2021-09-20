@@ -13,11 +13,21 @@ function QuoteCard({ quote }) {
 
 const styles = StyleSheet.create({
   card: {
-    height: '100%',
-    width: ITEM_WIDTH,
+    minHeight: 50,
+    width: ITEM_WIDTH - 40, // 40 because of right and left margins
     borderRadius: 16,
     backgroundColor: 'rgba(255, 255, 255, 0.67)',
-    padding: 10,
+    padding: 20,
+    marginRight: 20,
+    marginLeft: 20,
+    marginTop: 40,
+    marginBottom: 50,
+  },
+  quote: {
+    fontFamily: 'Roboto',
+    fontStyle: 'italic',
+    fontSize: 31,
+    fontWeight: '500',
   },
 });
 

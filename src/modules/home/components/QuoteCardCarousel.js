@@ -30,7 +30,6 @@ function QuoteCardCarousel({ quotes }) {
     <FlatList
       data={quotes}
       horizontal
-      style={{ height: 250 }}
       contentContainerStyle={{ paddingVertical: 16 }}
       contentInsetAdjustmentBehavior="never"
       decelerationRate={'fast'}
