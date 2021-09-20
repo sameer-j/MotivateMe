@@ -1,17 +1,23 @@
 import React from 'react';
-import { Dimensions, StyleSheet, Text, View } from 'react-native';
+import { Dimensions, Image, StyleSheet, Text, View } from 'react-native';
 
 const ITEM_WIDTH = Dimensions.get('window').width;
+const QUOTE_ICON = require('../assets/quote.png');
 
 function QuoteCard({ quote }) {
   return (
     <View style={[styles.card]}>
-      <Text>{quote}</Text>
+      <Image style={[styles.quoteIcon]} source={QUOTE_ICON} />
+      <Text style={[styles.quote]}>{quote}</Text>
     </View>
   );
 }
 
+// TODO: remove hardcoded values
 const styles = StyleSheet.create({
+  quoteIcon: {
+    opacity: 0.7,
+  },
   card: {
     minHeight: 50,
     width: ITEM_WIDTH - 40, // 40 because of right and left margins
