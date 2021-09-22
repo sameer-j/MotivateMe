@@ -18,7 +18,9 @@ Tasks:
 Features: 
   ☐ Show dummy quotes
   ☐ Show quotes from firebase
-  ☐ 
+  ☐ Share quote with background styling
 
 Issues:
   ✔ handle orientation change - locked to portrait @done(21-09-20 20:35)
+  ✔ favorite footer jump because of icon size mismatch @done(21-09-22 15:59)
+  ☐ improve favorite icon resolution

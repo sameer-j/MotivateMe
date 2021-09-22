@@ -23,7 +23,7 @@ function QuoteCardCarousel({ quotes }) {
           },
         ],
       }}>
-      <QuoteCard quote={item.quote} />
+      <QuoteCard quote={item} />
     </Animated.View>
   );
   return (
