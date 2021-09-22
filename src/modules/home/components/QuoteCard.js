@@ -10,9 +10,11 @@ function QuoteCard({ quote }) {
   const [favorite, setFavorite] = useState(false);
   return (
     <View style={styles.card}>
-      <View>
+      <View style={styles.quoteBody}>
         <Image style={styles.quoteIcon} source={quoteIcon} />
-        <Text style={styles.quote}>{quote.quote}</Text>
+        <Text adjustsFontSizeToFit style={styles.quote}>
+          {quote.quote}
+        </Text>
       </View>
       <View style={styles.quoteFooter}>
         <Text style={styles.quoteCategory}>
@@ -26,15 +28,6 @@ function QuoteCard({ quote }) {
   );
 }
 
-// TODO: implement favorite check for each user
-// const isFavorite = (quoteId) => {
-//   return favorite;
-// };
-
-const toggleFavorite = (favorite) => {
-  setFavorite(!favorite);
-};
-
 // TODO: remove hardcoded values
 const styles = StyleSheet.create({
   quoteIcon: {
@@ -44,13 +37,17 @@ const styles = StyleSheet.create({
   },
   card: {
     minHeight: SCREEN_HEIGHT * 0.4,
+    maxHeight: SCREEN_HEIGHT * 0.75,
     width: SCREEN_WIDTH - 40, // 40 because of right and left margins
     borderRadius: 16,
     backgroundColor: 'rgba(255, 255, 255, 0.67)',
     padding: 20,
     marginHorizontal: 20,
-    marginVertical: 40,
     justifyContent: 'space-between',
+  },
+  quoteBody: {
+    flexShrink: 1,
+    maxHeight: '100%',
   },
   quote: {
     fontFamily: 'Roboto',
@@ -58,12 +55,15 @@ const styles = StyleSheet.create({
     fontSize: 31,
     fontWeight: '500',
     marginTop: -30,
+    flexShrink: 1,
+    maxHeight: '90%',
   },
   quoteFooter: {
-    marginTop: 50,
+    marginTop: 30,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    maxHeight: '10%',
   },
   quoteCategory: {
     color: '#77891A',

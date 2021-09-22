@@ -1,8 +1,20 @@
 export const QUOTES = [
   {
+    id: 'q5',
+    quote:
+      'Our starting point is always wrong. Instead of beginning with ourselves, we always want to change others first and ourselves last. If everyone would begin first with themselves then there would be peace all around!',
+    category: 'cat1',
+  },
+  {
     id: 'q1',
     quote: 'Tough times never last, but tough people do',
     category: 'motivation',
+  },
+  {
+    id: 'long',
+    quote:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada purus ligula, vitae pharetra sapien ullamcorper nec. Praesent odio libero, pretium vitae nisl eu, convallis suscipit risus. Donec felis dolor, dignissim nec venenatis consectetur, finibus et libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Maecenas in egestas odio, eget finibus tellus. Donec porta felis ipsum, non condimentum est posuere eget',
+    category: 'very long quote test',
   },
   {
     id: 'q2',
@@ -20,12 +32,6 @@ export const QUOTES = [
     quote:
       'I learned that courage was not the absence of fear, but the triumph over it. The brave man is not he who does not feel afraid, but he who conquers that fear',
     category: 'inspiration',
-  },
-  {
-    id: 'q5',
-    quote:
-      'Our starting point is always wrong. Instead of beginning with ourselves, we always want to change others first and ourselves last. If everyone would begin first with themselves, then there would be peace all around!',
-    category: 'cat1',
   },
   {
     id: 'q6',
