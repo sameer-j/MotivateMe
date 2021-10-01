@@ -1,22 +1,42 @@
 Tasks:
+  ✔ Workflow setup, send to slack @done(21-09-07 17:33)
   ✔ Background image @done(21-09-10 12:25)
   ✔ App icon @done(21-09-10 22:49)
   ✔ Splash screen @done(21-09-15 21:54)
-  ☐ Card
-    ☐ card position
-    ☐ card size
-    ☐ quote icon
-    ☐ category
-    ☐ favorites
-  ☐ Buttons for homescreen
-    ☐ listing button
+  ✔ Card @done(21-09-23 14:11)
+    ✔ card position @done(21-09-23 14:11)
+    ✔ card size @done(21-09-23 14:11)
+    ✔ quote icon @done(21-09-23 14:11)
+    ✔ category @done(21-09-23 14:11)
+    ✔ favorites @done(21-09-23 14:11)
+  ✔ Buttons for homescreen @done(21-09-23 14:11)
+    ✔ listing button @done(21-09-23 14:11)
     ✘ Next button (canceled) @cancelled(21-09-22 17:16)
-    ☐ share button
-    ☐ settings button
-  ✔ Workflow setup, send to slack @done(21-09-07 17:33)
+    ✔ share button @done(21-09-23 14:11)
+    ✔ settings button @done(21-09-23 14:11)
+  ☐ Themify using react navigation
+    ☐ system theme based
+    ☐ Theme setting based
+    ☐ dark colors finalize
+  ☐ Listing page
+    ☐ show all quotes in flatlist
+    ☐ search quotes (immediate from local cache + from api)
+    ☐ back button to home screen
+    ☐ filter by favorite
+    ☐ add new quote button
+  ☐ firebase connect
+    ☐ api for listing
+    ☐ api for adding new
+    ☐ use auth for adding new, add new on approval only?
+  ☐ local persist store
+    ☐ store favorites
+    ☐ local cache
+    ☐ record of last fetched
+  
 
 Features: 
-  ☐ Show dummy quotes
+  ✔ Show dummy quotes @done(21-09-23 14:18)
+  ☐ Themify
   ☐ Show quotes from firebase
   ☐ Share quote with background styling
   ☐ Jump to top button (to be reviewed)
@@ -26,3 +46,6 @@ Issues:
   ✔ handle orientation change - locked to portrait @done(21-09-20 20:35)
   ✔ favorite footer jump because of icon size mismatch @done(21-09-22 15:59)
   ☐ improve favorite icon resolution
+  ☐ Fix screen size wise scaling issue:
+    ☐ use react-native-size-matters
+  ✔ transparent status bar at android level @done(21-09-29 18:49)
