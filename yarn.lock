@@ -1226,6 +1226,13 @@
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
 
+"@react-native-firebase/perf@^12.9.1":
+  version "12.9.1"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/perf/-/perf-12.9.1.tgz#ac48a10d313b0f1dd4c9da3f7e5d6e5f27a5d61d"
+  integrity sha512-D1IDwPVdI8o7/KMALsNyRMFR45T2POtfx3a7wu8Tla6MDad/IMFQzTH8Lf15dMYrV5tDjMRDiPDDCkHxfuoQCw==
+  dependencies:
+    "@expo/config-plugins" "^4.0.2"
+
 "@react-native/assets@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@react-native/assets/-/assets-1.0.0.tgz#c6f9bf63d274bafc8e970628de24986b30a55c8e"
