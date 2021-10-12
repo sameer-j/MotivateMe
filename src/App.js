@@ -1,22 +1,26 @@
 import React, { useEffect } from 'react';
-import { View } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 
 import Layout from './components/Layout';
-import Home from './modules/home/components';
-import { LightTheme } from './themes/light';
+import Navigator from './navigator';
+
+const MyTheme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: 'transparent',
+  },
+};
 
 const App = () => {
   useEffect(() => {
     SplashScreen.hide();
   });
   return (
-    <NavigationContainer theme={LightTheme}>
+    <NavigationContainer theme={MyTheme}>
       <Layout>
-        <View>
-          <Home />
-        </View>
+        <Navigator />
       </Layout>
     </NavigationContainer>
   );

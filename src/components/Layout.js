@@ -1,6 +1,5 @@
 import React from 'react';
 import { ImageBackground, StyleSheet, Text, View } from 'react-native';
-import { useTheme } from '@react-navigation/native';
 
 const staticImage = require('../assets/background.png');
 
@@ -22,7 +21,6 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    alignItems: 'center',
   },
 });
 
