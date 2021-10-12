@@ -11,8 +11,12 @@
   },
   "dependencies": {
     "@react-native-firebase/app": "^12.9.1",
+    "@react-navigation/native": "^6.0.2",
+    "@react-navigation/native-stack": "^6.2.3",
     "react": "17.0.2",
     "react-native": "0.65.1",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-screens": "^3.7.2",
     "react-native-splash-screen": "^3.2.0",
     "react-native-vector-icons": "^8.1.0"
   },
@@ -28,9 +32,10 @@
     "react-test-renderer": "17.0.2"
   },
   "jest": {
+    "testEnvironment": "jsdom",
     "preset": "react-native",
     "transformIgnorePatterns": [
-      "node_modules/(?!(@react-native|react-native|react-native-vector-icons)/)"
+      "node_modules/(?!(@react-native|react-native|react-native-vector-icons|@react-navigation)/)"
     ]
   }
 }

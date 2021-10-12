@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { useNavigation } from '@react-navigation/core';
+import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 const iconStyle = {
@@ -7,9 +8,12 @@ const iconStyle = {
   color: 'black',
 };
 function Footer() {
+  const navigation = useNavigation();
   return (
     <View style={[styles.footer]}>
-      <TouchableOpacity style={styles.roundButton}>
+      <TouchableOpacity
+        style={styles.roundButton}
+        onPress={() => navigation.navigate('QuoteListing')}>
         <Icon name="list" size={iconStyle.size} color={iconStyle.color} />
       </TouchableOpacity>
       <TouchableOpacity style={[styles.roundButton, styles.roundButtonPrimary]}>
@@ -19,7 +23,9 @@ function Footer() {
           color={iconStyle.color}
         />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.roundButton}>
+      <TouchableOpacity
+        style={styles.roundButton}
+        onPress={() => navigation.navigate('Settings')}>
         <Icon name="settings" size={iconStyle.size} color={iconStyle.color} />
       </TouchableOpacity>
     </View>
@@ -32,6 +38,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     marginBottom: 30,
     alignItems: 'center',
+    // backgroundColor: 'yellow',
   },
   roundButton: {
     width: 40,
