@@ -1,5 +1,6 @@
 import React from 'react';
 import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+
 const staticImage = require('../assets/background.png');
 
 const Layout = ({ children }) => (
@@ -20,9 +21,6 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    // justifyContent: 'center',
-    // alignContent: 'center',
-    alignItems: 'center',
   },
 });
 
