@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
+import { useTheme } from '@react-navigation/native';
 
 import { SCREEN_HEIGHT, SCREEN_WIDTH } from '../constants';
 const quoteIcon = require('../assets/quote.png');
@@ -8,16 +9,19 @@ const favoriteFilledIcon = require('../assets/favoriteFilled.png');
 
 function QuoteCard({ quote }) {
   const [favorite, setFavorite] = useState(false);
+  const { colors, textColor } = useTheme();
   return (
-    <View style={styles.card}>
+    <View style={{ ...styles.card, backgroundColor: colors.surface }}>
       <View style={styles.quoteBody}>
         <Image style={styles.quoteIcon} source={quoteIcon} />
-        <Text adjustsFontSizeToFit style={styles.quote}>
+        <Text
+          adjustsFontSizeToFit
+          style={{ ...styles.quote, color: textColor.darkest }}>
           {quote.quote}
         </Text>
       </View>
       <View style={styles.quoteFooter}>
-        <Text style={styles.quoteCategory}>
+        <Text style={{ ...styles.quoteCategory, color: textColor.link }}>
           #{quote.category.toUpperCase()}
         </Text>
         <Pressable onPress={() => setFavorite(!favorite)}>
@@ -40,7 +44,7 @@ const styles = StyleSheet.create({
     maxHeight: SCREEN_HEIGHT * 0.75,
     width: SCREEN_WIDTH - 40, // 40 because of right and left margins
     borderRadius: 16,
-    backgroundColor: 'rgba(255, 255, 255, 0.67)',
+    backgroundColor: 'rgba(255, 255, 255, 0.67)', // overridden by theme color - inline style
     padding: 20,
     marginHorizontal: 20,
     justifyContent: 'space-between',
@@ -57,6 +61,7 @@ const styles = StyleSheet.create({
     marginTop: -30,
     flexShrink: 1,
     maxHeight: '90%',
+    color: '#212121', // overridden by theme color - inline style
   },
   quoteFooter: {
     marginTop: 30,
@@ -66,7 +71,7 @@ const styles = StyleSheet.create({
     maxHeight: '10%',
   },
   quoteCategory: {
-    color: '#77891A',
+    color: '#77891A', // overridden by theme color - inline style
     fontFamily: 'Roboto',
     fontWeight: 'bold',
   },
