@@ -35,10 +35,10 @@ function Footer() {
 const styles = StyleSheet.create({
   footer: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     marginBottom: 30,
     alignItems: 'center',
-    // backgroundColor: 'yellow',
+    paddingHorizontal: 20,
   },
   roundButton: {
     width: 40,
