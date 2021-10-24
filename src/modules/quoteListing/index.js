@@ -1,5 +1,11 @@
-import React from 'react';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import { SCREEN_HEIGHT, SCREEN_WIDTH } from '../../constants';
 import BackButton from '../../components/BackButton';
 
@@ -25,12 +31,24 @@ const QuoteListing = () => {
 
 const QuoteListItem = React.memo(({ item }) => {
   const { textColor } = useTheme();
+  const [expanded, setExpanded] = useState(false);
   return (
-    <View style={styles.card}>
-      <Text style={{ ...styles.quote, color: textColor.darkest }}>
+    <TouchableOpacity
+      style={styles.card}
+      onPress={() => {
+        if (expanded) {
+          setExpanded(false);
+        } else {
+          setExpanded(true);
+        }
+      }}
+      activeOpacity={0.7}>
+      <Text
+        numberOfLines={expanded ? null : 2}
+        style={{ ...styles.quote, color: textColor.darkest }}>
         {item.quote}
       </Text>
-    </View>
+    </TouchableOpacity>
   );
 });
 
