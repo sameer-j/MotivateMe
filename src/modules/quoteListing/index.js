@@ -11,10 +11,11 @@ import BackButton from '../../components/BackButton';
 
 import { QUOTES } from '../../data/quotes';
 import { useTheme } from '@react-navigation/native';
+import QuoteListEmptyView from '../../components/QuoteListEmptyView';
 
 const QuoteListing = () => {
   return (
-    <View style={{ marginTop: 70 }}>
+    <View style={{ marginTop: 70, flex: 1 }}>
       <View style={{ paddingHorizontal: 10 }}>
         <BackButton />
       </View>
@@ -23,6 +24,11 @@ const QuoteListing = () => {
           data={QUOTES}
           renderItem={({ item }) => <QuoteListItem item={item} />}
           keyExtractor={(item) => item.id}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{
+            flexGrow: 1,
+          }}
+          ListEmptyComponent={<QuoteListEmptyView />}
         />
       </View>
     </View>
@@ -56,6 +62,7 @@ const styles = StyleSheet.create({
   quoteListBody: {
     paddingHorizontal: 20,
     maxHeight: SCREEN_HEIGHT * 0.9,
+    flex: 1,
   },
   card: {
     maxHeight: SCREEN_HEIGHT * 0.75,
