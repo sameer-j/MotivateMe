@@ -48,7 +48,7 @@ const QuoteListItem = React.memo(({ item }) => {
           setExpanded(true);
         }
       }}
-      activeOpacity={0.7}>
+      activeOpacity={0.8}>
       <Text
         numberOfLines={expanded ? null : 2}
         style={{ ...styles.quote, color: textColor.darkest }}>
