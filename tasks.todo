@@ -15,17 +15,19 @@ Tasks:
     ✔ share button @done(21-09-23 14:11)
     ✔ settings button @done(21-09-23 14:11)
   ☐ Themify using react navigation
-    ☐ system theme based
+    ✔ system theme based @done(21-10-25 13:12)
     ☐ Theme setting based
     ☐ dark colors finalize
   ☐ Listing page
-    ☐ show all quotes in flatlist
+    ✔ show all quotes in flatlist @done(21-10-25 16:08)
     ☐ search quotes (immediate from local cache + from api)
-    ☐ back button to home screen
+    ✔ back button to home screen @done(21-10-25 16:08)
     ☐ filter by favorite
     ☐ add new quote button
+    ✔ empty list handler @done(21-10-25 13:12)
   ☐ firebase connect
-    ☐ api for listing
+    ✔ api for listing @done(21-10-25 19:39)
+    ☐ paginated list of data
     ☐ api for adding new
     ☐ use auth for adding new, add new on approval only?
   ☐ local persist store
@@ -36,7 +38,7 @@ Tasks:
 
 Features: 
   ✔ Show dummy quotes @done(21-09-23 14:18)
-  ☐ Themify
+  ☐ Themify @started(21-10-25 13:12)
   ☐ Show quotes from firebase
   ☐ Share quote with background styling
   ☐ Jump to top button (to be reviewed)
@@ -49,3 +51,6 @@ Issues:
   ☐ Fix screen size wise scaling issue:
     ☐ use react-native-size-matters
   ✔ transparent status bar at android level @done(21-09-29 18:49)
+  ✔ QuoteListing car onPress reduce transparency (down by 30%) @done(21-10-25 16:07)
+  ☐ Flatlist rendering all instead of just 10
+  ☐ improve flatlist performance
