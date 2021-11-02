@@ -3,17 +3,23 @@ Tasks:
   ✔ Background image @done(21-09-10 12:25)
   ✔ App icon @done(21-09-10 22:49)
   ✔ Splash screen @done(21-09-15 21:54)
-  ✔ Card @done(21-09-23 14:11)
-    ✔ card position @done(21-09-23 14:11)
-    ✔ card size @done(21-09-23 14:11)
-    ✔ quote icon @done(21-09-23 14:11)
-    ✔ category @done(21-09-23 14:11)
-    ✔ favorites @done(21-09-23 14:11)
-  ✔ Buttons for homescreen @done(21-09-23 14:11)
-    ✔ listing button @done(21-09-23 14:11)
-    ✘ Next button (canceled) @cancelled(21-09-22 17:16)
-    ✔ share button @done(21-09-23 14:11)
-    ✔ settings button @done(21-09-23 14:11)
+  ☐ Home:
+    ✔ Card @done(21-09-23 14:11)
+      ✔ card position @done(21-09-23 14:11)
+      ✔ card size @done(21-09-23 14:11)
+      ✔ quote icon @done(21-09-23 14:11)
+      ✔ category @done(21-09-23 14:11)
+      ✔ favorites @done(21-09-23 14:11)
+    ✔ Buttons for homescreen @done(21-09-23 14:11)
+      ✔ listing button @done(21-09-23 14:11)
+      ✘ Next button (canceled) @cancelled(21-09-22 17:16)
+      ✔ share button @done(21-09-23 14:11)
+      ✔ settings button @done(21-09-23 14:11)
+    ☐ QuoteCard category link click to show all quotes of that category in listing page
+    ☐ Show Author
+    ☐ multi category quotes?
+    ☐ author name click to show all his quotes in listing page
+    ☐ Should quotes be called tags?
   ☐ Themify using react navigation
     ✔ system theme based @done(21-10-25 13:12)
     ☐ Theme setting based
@@ -25,6 +31,7 @@ Tasks:
     ☐ filter by favorite
     ☐ add new quote button
     ✔ empty list handler @done(21-10-25 13:12)
+    ☐ pull to refresh to fetch new quotes
   ☐ firebase connect
     ✔ api for listing @done(21-10-25 19:39)
     ☐ paginated list of data
@@ -39,7 +46,7 @@ Tasks:
 Features: 
   ✔ Show dummy quotes @done(21-09-23 14:18)
   ☐ Themify @started(21-10-25 13:12)
-  ☐ Show quotes from firebase
+  ✔ Show quotes from firebase @done(21-11-02 21:38)
   ☐ Share quote with background styling
   ☐ Jump to top button (to be reviewed)
 
@@ -54,3 +61,4 @@ Issues:
   ✔ QuoteListing car onPress reduce transparency (down by 30%) @done(21-10-25 16:07)
   ☐ Flatlist rendering all instead of just 10
   ☐ improve flatlist performance
+  ☐ use thunk for async dispatch
