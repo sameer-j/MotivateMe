@@ -6,14 +6,15 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { useTheme } from '@react-navigation/native';
+import { useSelector } from 'react-redux';
+
 import { SCREEN_HEIGHT, SCREEN_WIDTH } from '../../constants';
 import BackButton from '../../components/BackButton';
-
-import { QUOTES } from '../../data/quotes';
-import { useTheme } from '@react-navigation/native';
 import QuoteListEmptyView from '../../components/QuoteListEmptyView';
 
 const QuoteListing = () => {
+  const quotes = useSelector((state) => state.quotes);
   return (
     <View style={{ marginTop: 70, flex: 1 }}>
       <View style={{ paddingHorizontal: 10 }}>
@@ -21,7 +22,7 @@ const QuoteListing = () => {
       </View>
       <View style={styles.quoteListBody}>
         <FlatList
-          data={QUOTES}
+          data={quotes}
           renderItem={({ item }) => <QuoteListItem item={item} />}
           keyExtractor={(item) => item.id}
           showsVerticalScrollIndicator={false}
