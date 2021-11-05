@@ -1,8 +1,14 @@
-import { GET_FAVORITES, GET_QUOTES, GET_QUOTES_LOADING } from '../actions';
+import {
+  GET_FAVORITES,
+  GET_QUOTES,
+  GET_QUOTES_ERROR,
+  GET_QUOTES_LOADING,
+} from '../actions';
 
 const initialState = {
   data: {},
   loading: false,
+  error: false,
   favorites: {},
 };
 
@@ -18,6 +24,12 @@ const quotes = (state = initialState, action) => {
       return {
         ...state,
         loading: true,
+      };
+    }
+    case GET_QUOTES_ERROR: {
+      return {
+        ...state,
+        loading: false,
       };
     }
     case GET_FAVORITES: {
