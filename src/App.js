@@ -3,6 +3,8 @@ import SplashScreen from 'react-native-splash-screen';
 import { NavigationContainer } from '@react-navigation/native';
 import { useColorScheme } from 'react-native';
 import { Provider } from 'react-redux';
+import { persistStore } from 'redux-persist';
+import { PersistGate } from 'redux-persist/lib/integration/react';
 
 import Layout from './components/Layout';
 import Navigator from './navigator';
@@ -18,12 +20,14 @@ const App = () => {
   });
   return (
     <Provider store={store}>
-      <NavigationContainer
-        theme={systemTheme === 'dark' ? DarkTheme : LightTheme}>
-        <Layout>
-          <Navigator />
-        </Layout>
-      </NavigationContainer>
+      <PersistGate loading={null} persistor={persistStore(store)}>
+        <NavigationContainer
+          theme={systemTheme === 'dark' ? DarkTheme : LightTheme}>
+          <Layout>
+            <Navigator />
+          </Layout>
+        </NavigationContainer>
+      </PersistGate>
     </Provider>
   );
 };

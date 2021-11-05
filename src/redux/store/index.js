@@ -1,8 +1,16 @@
 import { createStore } from 'redux';
+import AsyncStorage from '@react-native-community/async-storage';
+import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
+import { persistReducer } from 'redux-persist';
+
 import reducers from '../reducers';
 
-const initialState = {
-  quotes: [],
-  isFetching: true,
+// persist config
+const persistConfig = {
+  key: 'root',
+  storage: AsyncStorage,
+  stateReconciler: autoMergeLevel2,
 };
-export default createStore(reducers, initialState);
+
+const persistedReducer = persistReducer(persistConfig, reducers);
+export default createStore(persistedReducer);
