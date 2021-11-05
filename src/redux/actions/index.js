@@ -8,7 +8,7 @@ export const IS_FETCHING = 'IS_FETCHING';
  * Action Object:
  * {
  *  type: GET_QUOTES,
- *  payload: quotes
+ *  payload: quotes (object of quotes)
  * }
  * {
  *  type: IS_FETCHING,

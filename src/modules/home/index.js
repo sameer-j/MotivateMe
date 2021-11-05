@@ -26,7 +26,7 @@ function Home() {
 
   return (
     <View style={{ flex: 1 }}>
-      <QuoteCardCarousel quotes={quotes} />
+      <QuoteCardCarousel quotes={Object.values(quotes)} />
       <View style={{ justifyContent: 'flex-end' }}>
         <Footer />
       </View>
