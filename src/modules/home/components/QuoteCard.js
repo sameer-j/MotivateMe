@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { SCREEN_HEIGHT, SCREEN_WIDTH } from '../constants';
 import { setFavorite } from '../../../redux/actions';
 const quoteIcon = require('../assets/quote.png');
-const favoriteEmptyIcon = require('../assets/favoriteEmpty.png');
-const favoriteFilledIcon = require('../assets/favoriteFilled.png');
+const favoriteEmptyIcon = require('../../../assets/favoriteEmpty.png');
+const favoriteFilledIcon = require('../../../assets/favoriteFilled.png');
 
 function QuoteCard({ quote }) {
   const { colors, textColor } = useTheme();
