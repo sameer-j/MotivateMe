@@ -8,15 +8,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchQuotes } from '../../redux/actions';
 
 function Home() {
-  const quotes = useSelector((state) => state.quotes);
-  const isFetching = useSelector((state) => state.isFetching);
+  const quotes = useSelector(({ quotes }) => quotes.data);
+  const loading = useSelector(({ quotes }) => quotes.loading);
   const dispatch = useDispatch();
+  console.log('home re-rendered!');
 
   useEffect(() => {
     fetchQuotes(dispatch);
   }, []);
 
-  if (isFetching) {
+  if (loading) {
     return (
       <View style={{ flex: 1, justifyContent: 'center' }}>
         <ActivityIndicator size={100} />

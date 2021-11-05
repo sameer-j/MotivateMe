@@ -14,7 +14,7 @@ import BackButton from '../../components/BackButton';
 import QuoteListEmptyView from '../../components/QuoteListEmptyView';
 
 const QuoteListing = () => {
-  const quotes = useSelector((state) => state.quotes);
+  const quotes = useSelector(({ quotes }) => quotes.data);
   return (
     <View style={{ marginTop: 70, flex: 1 }}>
       <View style={{ paddingHorizontal: 10 }}>

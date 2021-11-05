@@ -2,7 +2,7 @@ import { QUOTES_URL } from '../../constants';
 import { getParsedFirestoreJSON } from '../../util';
 
 export const GET_QUOTES = 'GET_QUOTES';
-export const IS_FETCHING = 'IS_FETCHING';
+export const GET_QUOTES_LOADING = 'GET_QUOTES_LOADING'; // TODO: naming scheme?
 
 /**
  * Action Object:
@@ -11,8 +11,8 @@ export const IS_FETCHING = 'IS_FETCHING';
  *  payload: quotes (object of quotes)
  * }
  * {
- *  type: IS_FETCHING,
- *  payload: false
+ *  type: GET_QUOTES_LOADING
+ * }
  * }
  */
 
@@ -33,7 +33,7 @@ export const IS_FETCHING = 'IS_FETCHING';
 //   }
 // };
 export const fetchQuotes = (dispatch) => {
-  dispatch({ type: IS_FETCHING, payload: true });
+  dispatch({ type: GET_QUOTES_LOADING });
   try {
     fetch(QUOTES_URL)
       .then((res) => res.json())
@@ -42,11 +42,10 @@ export const fetchQuotes = (dispatch) => {
           type: GET_QUOTES,
           payload: getParsedFirestoreJSON(json.documents),
         });
-        dispatch({ type: IS_FETCHING, payload: false });
       });
   } catch (error) {
     console.error(error);
-    dispatch({ type: IS_FETCHING, payload: false });
+    dispatch({ type: GET_QUOTES_LOADING }); // TODO: handle error separately
   } finally {
     // dispatch({ type: IS_FETCHING, payload: false });
   }

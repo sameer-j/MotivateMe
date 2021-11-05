@@ -1,21 +1,6 @@
-import { GET_QUOTES, IS_FETCHING } from '../actions';
+import { combineReducers } from 'redux';
+import quotes from './quotes';
 
-const quotes = (state = {}, action) => {
-  switch (action.type) {
-    case GET_QUOTES:
-      return {
-        ...state,
-        quotes: action.payload,
-      };
-    case IS_FETCHING: {
-      return {
-        ...state,
-        isFetching: action.payload,
-      };
-    }
-    default:
-      return state;
-  }
-};
-
-export default quotes;
+export default combineReducers({
+  quotes,
+});
