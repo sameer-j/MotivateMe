@@ -22,7 +22,7 @@ const QuoteListing = () => {
       </View>
       <View style={styles.quoteListBody}>
         <FlatList
-          data={quotes}
+          data={Object.values(quotes)}
           renderItem={({ item }) => <QuoteListItem item={item} />}
           keyExtractor={(item) => item.id}
           showsVerticalScrollIndicator={false}

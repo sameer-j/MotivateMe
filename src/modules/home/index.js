@@ -11,6 +11,7 @@ function Home() {
   const quotes = useSelector((state) => state.quotes);
   const isFetching = useSelector((state) => state.isFetching);
   const dispatch = useDispatch();
+  console.log('home re-rendered!');
 
   useEffect(() => {
     fetchQuotes(dispatch);
@@ -26,7 +27,7 @@ function Home() {
 
   return (
     <View style={{ flex: 1 }}>
-      <QuoteCardCarousel quotes={quotes} />
+      <QuoteCardCarousel quotes={Object.values(quotes)} />
       <View style={{ justifyContent: 'flex-end' }}>
         <Footer />
       </View>

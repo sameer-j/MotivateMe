@@ -1,4 +1,4 @@
-import { GET_QUOTES, IS_FETCHING } from '../actions';
+import { GET_FAVORITES, GET_QUOTES, IS_FETCHING } from '../actions';
 
 const quotes = (state = {}, action) => {
   switch (action.type) {
@@ -11,6 +11,15 @@ const quotes = (state = {}, action) => {
       return {
         ...state,
         isFetching: action.payload,
+      };
+    }
+    case GET_FAVORITES: {
+      return {
+        ...state,
+        favorites: {
+          ...state.favorites,
+          ...action.payload,
+        },
       };
     }
     default:

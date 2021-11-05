@@ -27,11 +27,13 @@
                     ]
  */
 export const getParsedFirestoreJSON = (documents) => {
-  return documents.map((doc) => {
+  const parsedResult = {};
+  documents.map((doc) => {
     let obj = {};
     for (const [key, value] of Object.entries(doc.fields)) {
       obj[key] = Object.values(value)[0];
     }
-    return obj;
+    parsedResult[obj.id] = obj;
   });
+  return parsedResult;
 };

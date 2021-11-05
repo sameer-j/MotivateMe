@@ -2,17 +2,24 @@ import { QUOTES_URL } from '../../constants';
 import { getParsedFirestoreJSON } from '../../util';
 
 export const GET_QUOTES = 'GET_QUOTES';
-export const IS_FETCHING = 'IS_FETCHING';
+export const IS_FETCHING = 'IS_FETCHING'; // TODO: naming scheme?
+export const GET_FAVORITES = 'GET_FAVORITES';
 
 /**
  * Action Object:
  * {
  *  type: GET_QUOTES,
- *  payload: quotes
+ *  payload: quotes (object of quotes)
  * }
  * {
  *  type: IS_FETCHING,
- *  payload: false
+ *  payload: false (boolean)
+ * }
+ * {
+ *  type: GET_FAVORITES,
+ *  payload: {
+ *    quoteid: true (boolean)
+ *  }
  * }
  */
 
@@ -50,4 +57,14 @@ export const fetchQuotes = (dispatch) => {
   } finally {
     // dispatch({ type: IS_FETCHING, payload: false });
   }
+};
+
+export const setFavorite = (dispatch, id, flag) => {
+  console.log('setting favorite ', id, flag);
+  dispatch({
+    type: GET_FAVORITES,
+    payload: {
+      [id]: flag,
+    },
+  });
 };

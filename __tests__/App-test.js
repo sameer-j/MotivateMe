@@ -19,3 +19,7 @@ jest.mock('react-native-splash-screen', () => {
     show: jest.fn(),
   };
 });
+
+jest.mock('@react-native-community/async-storage', () =>
+  require('@react-native-community/async-storage/jest/async-storage-mock'),
+);
