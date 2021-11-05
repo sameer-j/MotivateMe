@@ -3,6 +3,7 @@ import { getParsedFirestoreJSON } from '../../util';
 
 export const GET_QUOTES = 'GET_QUOTES';
 export const GET_QUOTES_LOADING = 'GET_QUOTES_LOADING'; // TODO: naming scheme?
+export const GET_FAVORITES = 'GET_FAVORITES';
 
 /**
  * Action Object:
@@ -13,6 +14,11 @@ export const GET_QUOTES_LOADING = 'GET_QUOTES_LOADING'; // TODO: naming scheme?
  * {
  *  type: GET_QUOTES_LOADING
  * }
+ * {
+ *  type: GET_FAVORITES,
+ *  payload: {
+ *    quoteid: true (boolean)
+ *  }
  * }
  */
 
@@ -49,4 +55,13 @@ export const fetchQuotes = (dispatch) => {
   } finally {
     // dispatch({ type: IS_FETCHING, payload: false });
   }
+};
+
+export const setFavorite = (dispatch, id, flag) => {
+  dispatch({
+    type: GET_FAVORITES,
+    payload: {
+      [id]: flag,
+    },
+  });
 };

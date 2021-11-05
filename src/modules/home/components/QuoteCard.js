@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useTheme } from '@react-navigation/native';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { SCREEN_HEIGHT, SCREEN_WIDTH } from '../constants';
+import { setFavorite } from '../../../redux/actions';
 const quoteIcon = require('../assets/quote.png');
 const favoriteEmptyIcon = require('../assets/favoriteEmpty.png');
 const favoriteFilledIcon = require('../assets/favoriteFilled.png');
 
 function QuoteCard({ quote }) {
-  const [favorite, setFavorite] = useState(false);
   const { colors, textColor } = useTheme();
+  const dispatch = useDispatch();
+  const favorite = useSelector(({ quotes }) => quotes.favorites[quote.id]);
+  console.log('Quote ', quote.id, ' favorite is set to ', favorite);
   return (
     <View style={{ ...styles.card, backgroundColor: colors.surface }}>
       <View style={styles.quoteBody}>
@@ -24,7 +28,7 @@ function QuoteCard({ quote }) {
         <Text style={{ ...styles.quoteCategory, color: textColor.link }}>
           #{quote.category.toUpperCase()}
         </Text>
-        <Pressable onPress={() => setFavorite(!favorite)}>
+        <Pressable onPress={() => setFavorite(dispatch, quote.id, !favorite)}>
           <Image source={favorite ? favoriteFilledIcon : favoriteEmptyIcon} />
         </Pressable>
       </View>
