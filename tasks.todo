@@ -41,6 +41,7 @@ Tasks:
     ☐ store favorites
     ☐ local cache
     ☐ record of last fetched
+    ☐ offline first app
   
 
 Features: 
@@ -62,3 +63,6 @@ Issues:
   ☐ Flatlist rendering all instead of just 10
   ☐ improve flatlist performance
   ☐ use thunk for async dispatch
+  ☐ Better loader for quotes
+  ☐ check out reactotron
+  ☐ 
