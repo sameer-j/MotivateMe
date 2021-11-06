@@ -20,6 +20,7 @@ Tasks:
     ☐ multi category quotes?
     ☐ author name click to show all his quotes in listing page
     ☐ Should quotes be called tags?
+    ☐ Show latest to older order
   ☐ Themify using react navigation
     ✔ system theme based @done(21-10-25 13:12)
     ☐ Theme setting based
@@ -29,19 +30,29 @@ Tasks:
     ☐ search quotes (immediate from local cache + from api)
     ✔ back button to home screen @done(21-10-25 16:08)
     ☐ filter by favorite
+      ☐ local
+      ☐ query for quotes with id given by favorites dict
     ☐ add new quote button
     ✔ empty list handler @done(21-10-25 13:12)
     ☐ pull to refresh to fetch new quotes
+    ☐ Show latest to old order
   ☐ firebase connect
     ✔ api for listing @done(21-10-25 19:39)
     ☐ paginated list of data
+      ☐ think about favorites filter when all items are not currently available offline
     ☐ api for adding new
     ☐ use auth for adding new, add new on approval only?
   ☐ local persist store
-    ☐ store favorites
-    ☐ local cache
+    ✔ store favorites @done(21-11-05 23:43)
+    ✔ local cache @done(21-11-05 23:44)
     ☐ record of last fetched
     ☐ offline first app
+  ☐ Quote of the day
+    ☐ by push notification
+    ☐ random order
+    ☐ dont show already viewed, until all viewed
+    ☐ by widget
+
   
 
 Features: 
