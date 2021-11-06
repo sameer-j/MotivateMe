@@ -15,6 +15,7 @@ import QuoteListEmptyView from '../../components/QuoteListEmptyView';
 
 const QuoteListing = () => {
   const quotes = useSelector(({ quotes }) => quotes.data);
+  const favorites = useSelector(({ quotes }) => quotes.favorites);
   return (
     <View style={{ marginTop: 70, flex: 1 }}>
       <View style={{ paddingHorizontal: 10 }}>
@@ -23,7 +24,9 @@ const QuoteListing = () => {
       <View style={styles.quoteListBody}>
         <FlatList
           data={Object.values(quotes)}
-          renderItem={({ item }) => <QuoteListItem item={item} />}
+          renderItem={({ item }) => (
+            <QuoteListItem item={item} favorite={favorites[item.id]} />
+          )}
           keyExtractor={(item) => item.id}
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{
@@ -35,29 +38,6 @@ const QuoteListing = () => {
     </View>
   );
 };
-
-const QuoteListItem = React.memo(({ item }) => {
-  const { textColor } = useTheme();
-  const [expanded, setExpanded] = useState(false);
-  return (
-    <TouchableOpacity
-      style={styles.card}
-      onPress={() => {
-        if (expanded) {
-          setExpanded(false);
-        } else {
-          setExpanded(true);
-        }
-      }}
-      activeOpacity={0.8}>
-      <Text
-        numberOfLines={expanded ? null : 2}
-        style={{ ...styles.quote, color: textColor.darkest }}>
-        {item.quote}
-      </Text>
-    </TouchableOpacity>
-  );
-});
 
 const styles = StyleSheet.create({
   quoteListBody: {
