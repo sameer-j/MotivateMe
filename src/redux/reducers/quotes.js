@@ -1,5 +1,5 @@
 import {
-  GET_FAVORITES,
+  SET_FAVORITES,
   GET_QUOTES,
   GET_QUOTES_ERROR,
   GET_QUOTES_LOADING,
@@ -19,20 +19,23 @@ const quotes = (state = initialState, action) => {
         ...state,
         data: action.payload,
         loading: false,
+        error: false,
       };
     case GET_QUOTES_LOADING: {
       return {
         ...state,
         loading: true,
+        error: false,
       };
     }
     case GET_QUOTES_ERROR: {
       return {
         ...state,
         loading: false,
+        error: true,
       };
     }
-    case GET_FAVORITES: {
+    case SET_FAVORITES: {
       return {
         ...state,
         favorites: {
