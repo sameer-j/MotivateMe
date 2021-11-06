@@ -1,29 +1,43 @@
 import React, { useState } from 'react';
-import {
-  FlatList,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
-import { useTheme } from '@react-navigation/native';
+import { FlatList, Image, Pressable, StyleSheet, View } from 'react-native';
 import { useSelector } from 'react-redux';
 
-import { SCREEN_HEIGHT, SCREEN_WIDTH } from '../../constants';
+import { SCREEN_HEIGHT } from '../../constants';
 import BackButton from '../../components/BackButton';
 import QuoteListEmptyView from '../../components/QuoteListEmptyView';
+import QuoteListItem from './QuoteListItem';
+
+const favoriteEmptyIcon = require('../../assets/favoriteEmpty.png');
+const favoriteFilledIcon = require('../../assets/favoriteFilled.png');
 
 const QuoteListing = () => {
-  const quotes = useSelector(({ quotes }) => quotes.data);
+  console.log('rendering quotelisting');
   const favorites = useSelector(({ quotes }) => quotes.favorites);
+  const [showFavoritesFlag, setShowFavoritesFlag] = useState(false);
+  // TODO: memoise this?
+  const getFavoriteQuotes = (allQuotes) => {
+    return Object.values(allQuotes).filter((quote) => favorites[quote.id]);
+  };
+  let quotes = useSelector(({ quotes }) => {
+    if (showFavoritesFlag) {
+      return getFavoriteQuotes(quotes);
+    }
+    return quotes;
+  });
+
   return (
     <View style={{ marginTop: 70, flex: 1 }}>
-      <View style={{ paddingHorizontal: 10 }}>
+      <View style={styles.topBar}>
         <BackButton />
+        <Pressable onPress={() => setShowFavoritesFlag(!showFavoritesFlag)}>
+          <Image
+            source={showFavoritesFlag ? favoriteFilledIcon : favoriteEmptyIcon}
+          />
+        </Pressable>
       </View>
       <View style={styles.quoteListBody}>
         <FlatList
-          data={Object.values(quotes)}
+          data={quotes}
           renderItem={({ item }) => (
             <QuoteListItem item={item} favorite={favorites[item.id]} />
           )}
@@ -40,24 +54,15 @@ const QuoteListing = () => {
 };
 
 const styles = StyleSheet.create({
+  topBar: {
+    paddingHorizontal: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
   quoteListBody: {
     paddingHorizontal: 20,
     maxHeight: SCREEN_HEIGHT * 0.9,
     flex: 1,
-  },
-  card: {
-    maxHeight: SCREEN_HEIGHT * 0.75,
-    width: SCREEN_WIDTH - 40, // 40 because of right and left margins
-    borderRadius: 16,
-    backgroundColor: 'rgba(255, 255, 255, 0.67)', // overridden by theme color - inline style
-    padding: 20,
-    // justifyContent: 'space-between',
-    marginVertical: 5,
-  },
-  quote: {
-    fontFamily: 'Roboto',
-    fontSize: 20,
-    color: '#212121', // overridden by theme color - inline style
   },
 });
 
