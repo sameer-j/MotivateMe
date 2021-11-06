@@ -60,9 +60,9 @@ Issues:
     ☐ use react-native-size-matters
   ✔ transparent status bar at android level @done(21-09-29 18:49)
   ✔ QuoteListing car onPress reduce transparency (down by 30%) @done(21-10-25 16:07)
+  ✔ error handling for fetching @done(21-11-06 18:40)
   ☐ Flatlist rendering all instead of just 10
   ☐ improve flatlist performance
   ☐ use thunk for async dispatch
   ☐ Better loader for quotes
   ☐ check out reactotron
-  ☐ 
