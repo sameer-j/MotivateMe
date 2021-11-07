@@ -16,13 +16,14 @@ const QuoteListing = () => {
   const [showFavoritesFlag, setShowFavoritesFlag] = useState(false);
   // TODO: memoise this?
   const getFavoriteQuotes = (allQuotes) => {
-    return Object.values(allQuotes).filter((quote) => favorites[quote.id]);
+    return allQuotes.filter((quote) => favorites[quote.id]);
   };
   let quotes = useSelector(({ quotes }) => {
+    let quotesList = Object.values(quotes.data);
     if (showFavoritesFlag) {
-      return getFavoriteQuotes(quotes);
+      return getFavoriteQuotes(quotesList);
     }
-    return quotes;
+    return quotesList;
   });
 
   return (
