@@ -3,11 +3,20 @@ import SplashScreen from 'react-native-splash-screen';
 import { NavigationContainer } from '@react-navigation/native';
 import { useColorScheme } from 'react-native';
 import { Provider } from 'react-redux';
+import messaging from '@react-native-firebase/messaging';
 
 import Layout from './components/Layout';
 import Navigator from './navigator';
 import { LightTheme, DarkTheme } from './themes';
 import store from './redux/store';
+import {
+  firebaseBackgroundNotificationHandler,
+  firebaseLogFCMToken,
+  firebaseRequestUserPermission,
+  firebaseOnMessageListener,
+} from './firebase-util';
+
+firebaseBackgroundNotificationHandler();
 
 const config = {
   screens: {
@@ -32,6 +41,13 @@ const linking = {
 const App = () => {
   // const systemTheme = useColorScheme();
   const systemTheme = 'light';
+
+  useEffect(() => {
+    if (firebaseRequestUserPermission()) {
+      firebaseLogFCMToken();
+    }
+    firebaseOnMessageListener();
+  }, []);
 
   useEffect(() => {
     SplashScreen.hide();
