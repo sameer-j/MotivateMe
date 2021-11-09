@@ -5,6 +5,7 @@ import { useColorScheme } from 'react-native';
 import { Provider } from 'react-redux';
 import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/lib/integration/react';
+import PushNotification from 'react-native-push-notification';
 
 import Layout from './components/Layout';
 import Navigator from './navigator';
@@ -17,7 +18,9 @@ const App = () => {
 
   useEffect(() => {
     SplashScreen.hide();
+    createChannel();
   });
+
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistStore(store)}>
@@ -31,5 +34,15 @@ const App = () => {
     </Provider>
   );
 };
+
+// TODO: writing it here vs in the App function?
+const createChannel = () => {
+  PushNotification.createChannel({
+    channelId: 'default-channel',
+    channelName: 'Default Channel',
+  });
+};
+
+// TODO: why create service?
 
 export default App;
