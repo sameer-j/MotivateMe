@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigation } from '@react-navigation/core';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
+import PushNotification from 'react-native-push-notification';
 
 const iconStyle = {
   size: 20,
@@ -9,6 +10,13 @@ const iconStyle = {
 };
 function Footer() {
   const navigation = useNavigation();
+  const triggerNotification = () => {
+    PushNotification.localNotification({
+      channelId: 'default-channel',
+      title: 'Quote Delight Notification',
+      message: 'test notification',
+    });
+  };
   return (
     <View style={[styles.footer]}>
       <TouchableOpacity
@@ -16,7 +24,9 @@ function Footer() {
         onPress={() => navigation.navigate('QuoteListing')}>
         <Icon name="list" size={iconStyle.size} color={iconStyle.color} />
       </TouchableOpacity>
-      <TouchableOpacity style={[styles.roundButton, styles.roundButtonPrimary]}>
+      <TouchableOpacity
+        style={[styles.roundButton, styles.roundButtonPrimary]}
+        onPress={triggerNotification}>
         <Icon
           name="share-2"
           size={iconStyle.size * 1.5}
