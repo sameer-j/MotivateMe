@@ -14,18 +14,19 @@ import store from './redux/store';
 const config = {
   screens: {
     Home: {
-      path: ':id?',
+      path: 'quotes/:id?',
       parse: {
         id: (id) => `${id}`,
       },
     },
-    QuoteListing: 'listing',
+    QuoteListing: 'list-all',
+    Settings: 'settings',
   },
 };
 const linking = {
   prefixes: [
-    'https://sameer-j.github.io/quote-delight/quotes/',
-    'quote-delight://quotes/',
+    'https://sameer-j.github.io/quote-delight/',
+    'quote-delight://app',
   ],
   config,
 };
