@@ -5,7 +5,7 @@ import QuoteCard from './QuoteCard';
 
 const ITEM_WIDTH = Dimensions.get('window').width;
 
-function QuoteCardCarousel({ quotes }) {
+function QuoteCardCarousel({ quotes, initialScrollIndex }) {
   const pan = React.useRef(new Animated.ValueXY()).current;
   const renderItem = ({ item, index }) => (
     <Animated.View
@@ -49,6 +49,7 @@ function QuoteCardCarousel({ quotes }) {
           useNativeDriver: false,
         },
       )}
+      initialScrollIndex={initialScrollIndex}
       pagingEnabled={true}
       keyExtractor={(item) => item.id}
       renderItem={renderItem}

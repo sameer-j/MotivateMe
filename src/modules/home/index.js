@@ -7,11 +7,14 @@ import QuoteCardCarousel from './components/QuoteCardCarousel';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchQuotes } from '../../redux/actions';
 
-function Home() {
+function Home({ route }) {
   const quotes = useSelector(({ quotes }) => Object.values(quotes.data));
   const loading = useSelector(({ quotes }) => quotes.loading);
   const error = useSelector(({ quotes }) => quotes.error);
   const dispatch = useDispatch();
+
+  const initialScrollIndex = parseInt(route.params?.id);
+
   console.log('home re-rendered!');
 
   useEffect(() => {
@@ -36,7 +39,10 @@ function Home() {
 
   return (
     <View style={{ flex: 1 }}>
-      <QuoteCardCarousel quotes={quotes} />
+      <QuoteCardCarousel
+        quotes={quotes}
+        initialScrollIndex={initialScrollIndex}
+      />
       <View style={{ justifyContent: 'flex-end' }}>
         <Footer />
       </View>
