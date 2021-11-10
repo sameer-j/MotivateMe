@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import { ActivityIndicator, View, ToastAndroid } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Footer from './components/Footer';
 import QuoteCardCarousel from './components/QuoteCardCarousel';
 
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchQuotes } from '../../redux/actions';
+import { getQuotes } from '../../redux/actions';
 
 function Home({ route }) {
-  const quotes = useSelector(({ quotes }) => Object.values(quotes.data));
+  const quotes = useSelector(({ quotes }) => quotes.data);
   const loading = useSelector(({ quotes }) => quotes.loading);
   const error = useSelector(({ quotes }) => quotes.error);
   const dispatch = useDispatch();
@@ -18,7 +18,8 @@ function Home({ route }) {
   console.log('home re-rendered!');
 
   useEffect(() => {
-    fetchQuotes(dispatch);
+    const subscriber = getQuotes(dispatch);
+    return () => subscriber();
   }, []);
 
   if (loading) {

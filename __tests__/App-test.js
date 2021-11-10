@@ -23,3 +23,9 @@ jest.mock('react-native-splash-screen', () => {
 jest.mock('@react-native-community/async-storage', () =>
   require('@react-native-community/async-storage/jest/async-storage-mock'),
 );
+
+jest.mock('@react-native-firebase/firestore', () => {
+  return () => ({
+    collection: jest.fn(),
+  });
+});

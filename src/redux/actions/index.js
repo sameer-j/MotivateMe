@@ -1,5 +1,4 @@
-import { QUOTES_URL } from '../../constants';
-import { getParsedFirestoreJSON } from '../../util';
+import firestore from '@react-native-firebase/firestore';
 
 export const GET_QUOTES = 'GET_QUOTES';
 export const GET_QUOTES_LOADING = 'GET_QUOTES_LOADING';
@@ -23,36 +22,28 @@ export const SET_FAVORITES = 'SET_FAVORITES';
  * }
  */
 
-// export const fetchQuotes = async (dispatch) => {
-//   dispatch({ type: IS_FETCHING, payload: true });
-//   try {
-//     console.log('fetching quotes...');
-//     const response = await fetch(QUOTES_URL);
-//     const json = await response.json();
-//     dispatch({
-//       type: GET_QUOTES,
-//       payload: getParsedFirestoreJSON(json.documents),
-//     });
-//   } catch (error) {
-//     console.error(error);
-//   } finally {
-//     dispatch({ type: IS_FETCHING, payload: false });
-//   }
-// };
-export const fetchQuotes = (dispatch) => {
+export const getQuotes = (dispatch) => {
   dispatch({ type: GET_QUOTES_LOADING });
-  fetch(QUOTES_URL)
-    .then((res) => res.json())
-    .then((json) => {
+  const subscriber = firestore()
+    .collection('quotes')
+    .onSnapshot((querySnapshot) => {
+      const quotes = [];
+
+      querySnapshot.forEach((documentSnapshot) => {
+        quotes.push({
+          ...documentSnapshot.data(),
+          key: documentSnapshot.id,
+        });
+      });
+
       dispatch({
         type: GET_QUOTES,
-        payload: getParsedFirestoreJSON(json.documents),
+        payload: quotes,
       });
-    })
-    .catch((error) => {
-      console.error(error);
-      dispatch({ type: GET_QUOTES_ERROR });
     });
+
+  // Unsubscribe from events when no longer in use
+  return subscriber;
 };
 
 export const setFavorite = (dispatch, id, flag) => {
