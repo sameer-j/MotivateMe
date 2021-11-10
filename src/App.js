@@ -11,6 +11,25 @@ import Navigator from './navigator';
 import { LightTheme, DarkTheme } from './themes';
 import store from './redux/store';
 
+const config = {
+  screens: {
+    Home: {
+      path: ':id?',
+      parse: {
+        id: (id) => `${id}`,
+      },
+    },
+    QuoteListing: 'listing',
+  },
+};
+const linking = {
+  prefixes: [
+    'https://sameer-j.github.io/quote-delight/quotes/',
+    'quote-delight://quotes/',
+  ],
+  config,
+};
+
 const App = () => {
   // const systemTheme = useColorScheme();
   const systemTheme = 'light';
@@ -22,6 +41,7 @@ const App = () => {
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistStore(store)}>
         <NavigationContainer
+          linking={linking}
           theme={systemTheme === 'dark' ? DarkTheme : LightTheme}>
           <Layout>
             <Navigator />
