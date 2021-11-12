@@ -1,49 +1,45 @@
 import firestore from '@react-native-firebase/firestore';
 
-export const GET_QUOTES = 'GET_QUOTES';
 export const GET_QUOTES_LOADING = 'GET_QUOTES_LOADING';
 export const GET_QUOTES_ERROR = 'GET_QUOTES_ERROR';
 export const SET_FAVORITES = 'SET_FAVORITES';
+export const GET_DATA = 'GET_DATA';
 
-/**
- * Action Object:
- * {
- *  type: GET_QUOTES,
- *  payload: quotes (object of quotes)
- * }
- * {
- *  type: GET_QUOTES_LOADING
- * }
- * {
- *  type: SET_FAVORITES,
- *  payload: {
- *    quoteid: true (boolean)
- *  }
- * }
- */
+export const getQuotes = async () => {
+  const querySnapshot = await firestore().collection('quotes').get();
+  const quotes = [];
 
-export const getQuotes = (dispatch) => {
-  dispatch({ type: GET_QUOTES_LOADING });
-  const subscriber = firestore()
-    .collection('quotes')
-    .onSnapshot((querySnapshot) => {
-      const quotes = [];
-
-      querySnapshot.forEach((documentSnapshot) => {
-        quotes.push({
-          ...documentSnapshot.data(),
-          key: documentSnapshot.id,
-        });
-      });
-
-      dispatch({
-        type: GET_QUOTES,
-        payload: quotes,
-      });
+  querySnapshot.forEach((documentSnapshot) => {
+    quotes.push({
+      ...documentSnapshot.data(),
     });
+  });
 
-  // Unsubscribe from events when no longer in use
-  return subscriber;
+  return quotes;
+};
+
+export const getUserData = async (deviceId) => {
+  const querySnapshot = await firestore().collection(deviceId).get();
+  let userData = {};
+
+  querySnapshot.forEach((documentSnapshot) => {
+    userData = documentSnapshot.data();
+  });
+
+  return userData;
+};
+
+export const getData = async (dispatch, deviceId) => {
+  dispatch({ type: GET_QUOTES_LOADING });
+  const quotes = await getQuotes();
+  const userData = await getUserData(deviceId);
+  dispatch({
+    type: GET_DATA,
+    payload: {
+      quotes,
+      userData,
+    },
+  });
 };
 
 export const setFavorite = (dispatch, id, flag) => {

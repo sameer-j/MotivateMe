@@ -12,7 +12,7 @@ const favoriteFilledIcon = require('../../assets/favoriteFilled.png');
 
 const QuoteListing = () => {
   console.log('rendering quotelisting');
-  const favorites = useSelector(({ quotes }) => quotes.favorites);
+  const favorites = useSelector(({ userData }) => userData.favorites);
   const [showFavoritesFlag, setShowFavoritesFlag] = useState(false);
   // TODO: memoise this?
   const getFavoriteQuotes = (allQuotes) => {

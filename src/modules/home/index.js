@@ -6,12 +6,14 @@ import { getUniqueId } from 'react-native-device-info';
 import Footer from './components/Footer';
 import QuoteCardCarousel from './components/QuoteCardCarousel';
 
-import { getQuotes } from '../../redux/actions';
+import { getData } from '../../redux/actions';
+import { saveUserDataToDB } from '../utils/dbQuery';
 
 function Home({ route }) {
   const quotes = useSelector(({ quotes }) => quotes.data);
   const loading = useSelector(({ quotes }) => quotes.loading);
   const error = useSelector(({ quotes }) => quotes.error);
+
   const dispatch = useDispatch();
   const deviceId = getUniqueId();
 
@@ -20,8 +22,8 @@ function Home({ route }) {
   console.log('home re-rendered!');
 
   useEffect(() => {
-    const subscriber = getQuotes(dispatch);
-    return () => subscriber();
+    getData(dispatch, deviceId);
+    return () => saveUserDataToDB(deviceId);
   }, []);
 
   if (loading) {

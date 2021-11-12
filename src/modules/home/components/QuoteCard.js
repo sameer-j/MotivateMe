@@ -12,7 +12,7 @@ const favoriteFilledIcon = require('../../../assets/favoriteFilled.png');
 function QuoteCard({ quote }) {
   const { colors, textColor } = useTheme();
   const dispatch = useDispatch();
-  const favorite = useSelector(({ quotes }) => quotes.favorites[quote.id]);
+  const favorite = useSelector(({ userData }) => userData.favorites[quote.id]);
   console.log('Quote ', quote.id, ' favorite is set to ', favorite);
   return (
     <View style={{ ...styles.card, backgroundColor: colors.surface }}>

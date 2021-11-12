@@ -1,26 +1,21 @@
-import {
-  SET_FAVORITES,
-  GET_QUOTES,
-  GET_QUOTES_ERROR,
-  GET_QUOTES_LOADING,
-} from '../actions';
+import { GET_DATA, GET_QUOTES_ERROR, GET_QUOTES_LOADING } from '../actions';
 
 const initialState = {
-  data: {},
+  data: [],
   loading: false,
   error: false,
-  favorites: {},
 };
 
 const quotes = (state = initialState, action) => {
   switch (action.type) {
-    case GET_QUOTES:
+    case GET_DATA: {
       return {
         ...state,
-        data: action.payload,
+        data: action.payload.quotes,
         loading: false,
         error: false,
       };
+    }
     case GET_QUOTES_LOADING: {
       return {
         ...state,
@@ -33,15 +28,6 @@ const quotes = (state = initialState, action) => {
         ...state,
         loading: false,
         error: true,
-      };
-    }
-    case SET_FAVORITES: {
-      return {
-        ...state,
-        favorites: {
-          ...state.favorites,
-          ...action.payload,
-        },
       };
     }
     default:
