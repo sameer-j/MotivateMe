@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { ActivityIndicator, View, ToastAndroid } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
+import { getUniqueId } from 'react-native-device-info';
 
 import Footer from './components/Footer';
 import QuoteCardCarousel from './components/QuoteCardCarousel';
@@ -12,6 +13,7 @@ function Home({ route }) {
   const loading = useSelector(({ quotes }) => quotes.loading);
   const error = useSelector(({ quotes }) => quotes.error);
   const dispatch = useDispatch();
+  const deviceId = getUniqueId();
 
   const initialScrollIndex = parseInt(route.params?.id);
 

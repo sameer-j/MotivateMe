@@ -29,3 +29,9 @@ jest.mock('@react-native-firebase/firestore', () => {
     collection: jest.fn(),
   });
 });
+
+jest.mock('react-native-device-info', () => {
+  return {
+    getUniqueId: jest.fn(),
+  };
+});
