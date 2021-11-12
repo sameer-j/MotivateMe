@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { ActivityIndicator, View, ToastAndroid } from 'react-native';
+import React, { useEffect, useRef, useState } from 'react';
+import { AppState, ActivityIndicator, View, ToastAndroid } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUniqueId } from 'react-native-device-info';
 
@@ -10,6 +10,8 @@ import { getData } from '../../redux/actions';
 import { saveUserDataToDB } from '../utils/dbQuery';
 
 function Home({ route }) {
+  const appState = useRef(AppState.currentState);
+
   const quotes = useSelector(({ quotes }) => quotes.data);
   const loading = useSelector(({ quotes }) => quotes.loading);
   const error = useSelector(({ quotes }) => quotes.error);
@@ -23,7 +25,19 @@ function Home({ route }) {
 
   useEffect(() => {
     getData(dispatch, deviceId);
-    return () => saveUserDataToDB(deviceId);
+  }, []);
+
+  useEffect(() => {
+    const subscription = AppState.addEventListener('change', (nextAppState) => {
+      if (nextAppState === 'background') {
+        console.log('App has come to the background!');
+        saveUserDataToDB(deviceId);
+      }
+    });
+
+    return () => {
+      subscription.remove();
+    };
   }, []);
 
   if (loading) {
