@@ -1,14 +1,16 @@
 Next tasks:
   ☐ useReducer
+  ☐ useReducer with context api?
   ☐ useReducer with persist
   ☐ notification
     ☐ cloud
     ☐ local
-  ☐ deeplink
+  ✔ deeplink @done(21-11-11 16:12)
   ☐ pagination
   ☐ offline app
   ☐ widget
-  ☐ database
+  ☐ share quote
+  ✔ database @done(21-11-12 18:56)
 
 Tasks:
   ✔ Workflow setup, send to slack @done(21-09-07 17:33)
@@ -93,3 +95,4 @@ Issues:
   ☐ use thunk for async dispatch
   ☐ Better loader for quotes
   ☐ check out reactotron
+  ☐ deep link user may get only cached data in listing page
