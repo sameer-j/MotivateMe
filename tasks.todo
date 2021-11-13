@@ -96,3 +96,9 @@ Issues:
   ☐ Better loader for quotes
   ☐ check out reactotron
   ☐ deep link user may get only cached data in listing page
+  ☐ Notification fixes:
+    ☐ change icon color to theme based
+    ☐ Should work even when app is foreground
+    ☐ open app at the "quote of the day" quote when notification is pressed
+    ☐ improve cancel notification logic, make it for a fixed tag
+    ☐ sound for notifications

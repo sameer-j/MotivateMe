@@ -13,8 +13,7 @@ import {
   firebaseBackgroundNotificationHandler,
   firebaseLogFCMToken,
   firebaseRequestUserPermission,
-  firebaseOnMessageListener,
-} from './firebase-util';
+} from './modules/utils/Notifications';
 
 firebaseBackgroundNotificationHandler();
 
@@ -46,7 +45,6 @@ const App = () => {
     if (firebaseRequestUserPermission()) {
       firebaseLogFCMToken();
     }
-    firebaseOnMessageListener();
   }, []);
 
   useEffect(() => {

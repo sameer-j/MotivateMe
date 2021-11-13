@@ -6,6 +6,8 @@ import QuoteCard from './QuoteCard';
 const ITEM_WIDTH = Dimensions.get('window').width;
 
 function QuoteCardCarousel({ quotes, initialScrollIndex }) {
+  console.log('InitialScrollindex: ', initialScrollIndex);
+  console.log('Quote to be scrolled to: ', quotes[initialScrollIndex]);
   const pan = React.useRef(new Animated.ValueXY()).current;
   const renderItem = ({ item, index }) => (
     <Animated.View
