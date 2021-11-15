@@ -23,7 +23,9 @@ function Home({ route }) {
   console.log('home re-rendered!');
 
   useEffect(() => {
-    getData(dispatch, deviceId);
+    if (quotes.length == 0) {
+      getData(dispatch);
+    }
   }, []);
 
   useEffect(() => {
