@@ -1,38 +1,18 @@
-import firestore from '@react-native-firebase/firestore';
+import {
+  getQuotesFromDB,
+  getUserDataFromDB,
+} from '../../modules/utils/dbQuery';
 
 export const GET_QUOTES_LOADING = 'GET_QUOTES_LOADING';
 export const GET_QUOTES_ERROR = 'GET_QUOTES_ERROR';
 export const SET_FAVORITES = 'SET_FAVORITES';
 export const GET_DATA = 'GET_DATA';
+// export const DATA_FETCHED = 'DATA_FETCHED';
 
-export const getQuotes = async () => {
-  const querySnapshot = await firestore().collection('quotes').get();
-  const quotes = [];
-
-  querySnapshot.forEach((documentSnapshot) => {
-    quotes.push({
-      ...documentSnapshot.data(),
-    });
-  });
-
-  return quotes;
-};
-
-export const getUserData = async (deviceId) => {
-  const querySnapshot = await firestore().collection(deviceId).get();
-  let userData = {};
-
-  querySnapshot.forEach((documentSnapshot) => {
-    userData = documentSnapshot.data();
-  });
-
-  return userData;
-};
-
-export const getData = async (dispatch, deviceId) => {
+export const getData = async (dispatch) => {
   dispatch({ type: GET_QUOTES_LOADING });
-  const quotes = await getQuotes();
-  const userData = await getUserData(deviceId);
+  const quotes = await getQuotesFromDB();
+  const userData = await getUserDataFromDB();
   dispatch({
     type: GET_DATA,
     payload: {
