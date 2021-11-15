@@ -1,17 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { AppState, ActivityIndicator, View, ToastAndroid } from 'react-native';
+import React, { useEffect } from 'react';
+import { AppState, View, ToastAndroid } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUniqueId } from 'react-native-device-info';
 
 import Footer from './components/Footer';
 import QuoteCardCarousel from './components/QuoteCardCarousel';
+import Loader from '../../components/Loader';
 
 import { getData } from '../../redux/actions';
 import { saveUserDataToDB } from '../utils/dbQuery';
 
 function Home({ route }) {
-  const appState = useRef(AppState.currentState);
-
   const quotes = useSelector(({ quotes }) => quotes.data);
   const loading = useSelector(({ quotes }) => quotes.loading);
   const error = useSelector(({ quotes }) => quotes.error);
@@ -41,11 +40,7 @@ function Home({ route }) {
   }, []);
 
   if (loading) {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center' }}>
-        <ActivityIndicator size={100} />
-      </View>
-    );
+    return <Loader />;
   }
 
   if (error) {
