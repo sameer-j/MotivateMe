@@ -1,8 +1,6 @@
 import firestore from '@react-native-firebase/firestore';
 import { DEVICE_ID } from '.';
 
-import store from '../../redux/store';
-
 export const getQuotesFromDB = async () => {
   console.log('Fetching quotes from db...');
   const querySnapshot = await firestore()
@@ -34,8 +32,7 @@ export const getUserDataFromDB = async () => {
   return userData;
 };
 
-export const saveUserDataToDB = () => {
-  const favorites = store.getState().userData.favorites;
+export const saveUserDataToDB = (favorites) => {
   firestore()
     .collection(DEVICE_ID)
     .doc('1')

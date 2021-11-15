@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { AppState, View, ToastAndroid } from 'react-native';
+import { View, ToastAndroid } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Footer from './components/Footer';
@@ -7,7 +7,7 @@ import QuoteCardCarousel from './components/QuoteCardCarousel';
 import Loader from '../../components/Loader';
 
 import { getData } from '../../redux/actions';
-import { saveUserDataToDB } from '../utils/dbQuery';
+import useBackgroundSave from '../utils/hooks/useBackgroundSave';
 
 function Home({ route }) {
   const quotes = useSelector(({ quotes }) => quotes.data);
@@ -26,18 +26,7 @@ function Home({ route }) {
     }
   }, []);
 
-  useEffect(() => {
-    const subscription = AppState.addEventListener('change', (nextAppState) => {
-      if (nextAppState === 'background') {
-        console.log('App has come to the background!');
-        saveUserDataToDB();
-      }
-    });
-
-    return () => {
-      subscription.remove();
-    };
-  }, []);
+  useBackgroundSave();
 
   if (loading) {
     return <Loader />;
