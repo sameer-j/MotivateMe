@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { FlatList, Image, Pressable, StyleSheet, View } from 'react-native';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { SCREEN_HEIGHT } from '../../constants';
 import BackButton from '../../components/BackButton';
 import QuoteListEmptyView from '../../components/QuoteListEmptyView';
 import QuoteListItem from './QuoteListItem';
+import { getData } from '../../redux/actions';
 
 const favoriteEmptyIcon = require('../../assets/favoriteEmpty.png');
 const favoriteFilledIcon = require('../../assets/favoriteFilled.png');
 
 const QuoteListing = () => {
   console.log('rendering quotelisting');
+  const dispatch = useDispatch();
   const favorites = useSelector(({ userData }) => userData.favorites);
   const [showFavoritesFlag, setShowFavoritesFlag] = useState(false);
   // TODO: memoise this?
@@ -25,6 +27,10 @@ const QuoteListing = () => {
     }
     return quotesList;
   });
+
+  useEffect(() => {
+    getData(dispatch);
+  }, []);
 
   return (
     <View style={{ marginTop: 70, flex: 1 }}>

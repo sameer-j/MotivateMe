@@ -64,4 +64,4 @@ android/.settings/org.eclipse.buildship.core.prefs
 android/.project
 android/app/.classpath
 
-secrets/*
+secrets/secrets/*

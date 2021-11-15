@@ -1,5 +1,12 @@
 const QUOTES = [
   {
+    id: '0',
+    quote:
+      "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
+    category: 'humour',
+    author: 'Albert Einstein',
+  },
+  {
     id: '1',
     quote: 'Tough times never last, but tough people do.',
     category: 'inspiration',
