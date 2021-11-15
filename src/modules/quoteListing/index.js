@@ -1,19 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FlatList, Image, Pressable, StyleSheet, View } from 'react-native';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { SCREEN_HEIGHT } from '../../constants';
 import BackButton from '../../components/BackButton';
 import QuoteListEmptyView from '../../components/QuoteListEmptyView';
 import QuoteListItem from './QuoteListItem';
+import { getData } from '../../redux/actions';
+import Loader from '../../components/Loader';
 
 const favoriteEmptyIcon = require('../../assets/favoriteEmpty.png');
 const favoriteFilledIcon = require('../../assets/favoriteFilled.png');
 
 const QuoteListing = () => {
   console.log('rendering quotelisting');
+  const dispatch = useDispatch();
+  const loading = useSelector(({ quotes }) => quotes.loading);
   const favorites = useSelector(({ userData }) => userData.favorites);
   const [showFavoritesFlag, setShowFavoritesFlag] = useState(false);
+
   // TODO: memoise this?
   const getFavoriteQuotes = (allQuotes) => {
     return allQuotes.filter((quote) => favorites[quote.id]);
@@ -26,8 +31,18 @@ const QuoteListing = () => {
     return quotesList;
   });
 
+  useEffect(() => {
+    if (quotes.length == 0) {
+      getData(dispatch);
+    }
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
-    <View style={{ marginTop: 70, flex: 1 }}>
+    <View style={styles.container}>
       <View style={styles.topBar}>
         <BackButton />
         <Pressable onPress={() => setShowFavoritesFlag(!showFavoritesFlag)}>
@@ -55,6 +70,7 @@ const QuoteListing = () => {
 };
 
 const styles = StyleSheet.create({
+  container: { marginTop: 70, flex: 1 },
   topBar: {
     paddingHorizontal: 20,
     flexDirection: 'row',
