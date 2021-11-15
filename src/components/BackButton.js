@@ -7,7 +7,7 @@ const BackButton = () => {
   const navigation = useNavigation();
   return (
     <View style={{ alignItems: 'flex-start' }}>
-      <TouchableOpacity onPress={() => navigation.goBack()}>
+      <TouchableOpacity onPress={() => navigation.navigate('Home')}>
         <Icon name="arrow-left" size={30} color="white" />
       </TouchableOpacity>
     </View>
