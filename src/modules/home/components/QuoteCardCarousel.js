@@ -53,6 +53,11 @@ function QuoteCardCarousel({ quotes, initialScrollIndex }) {
       pagingEnabled={true}
       keyExtractor={(item) => item.id}
       renderItem={renderItem}
+      getItemLayout={(_, index) => ({
+        index,
+        length: ITEM_WIDTH,
+        offset: index * ITEM_WIDTH,
+      })}
     />
   );
 }
