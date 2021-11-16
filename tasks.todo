@@ -12,6 +12,19 @@ Next tasks:
   ☐ share quote
   ✔ database @done(21-11-12 18:56)
   ☐ Unit Test
+  ☐ Code Push
+  ☐ sentry
+  ☐ bugsnag
+  ☐ playstore deployment
+  ☐ typescript
+  ☐ firebase
+    ☐ cloudstore
+    ☐ cloud functions
+    ☐ analytics
+  ☐ pre commit hook
+    ☐ circular dependency
+  ☐ thunk
+  ☐ firebase performance analytics
 
 Tasks:
   ✔ Workflow setup, send to slack @done(21-09-07 17:33)
@@ -34,8 +47,8 @@ Tasks:
     ☐ Show Author
     ☐ multi category quotes?
     ☐ author name click to show all his quotes in listing page
-    ☐ Should quotes be called tags?
-    ☐ Show latest to older order
+    ☐ Should quotes category be called tags?
+    ✔ Show latest to older order @done(21-11-16 17:11)
   ☐ Themify using react navigation
     ✔ system theme based @done(21-10-25 13:12)
     ☐ Theme setting based
@@ -44,32 +57,32 @@ Tasks:
     ✔ show all quotes in flatlist @done(21-10-25 16:08)
     ☐ search quotes (immediate from local cache + from api)
     ✔ back button to home screen @done(21-10-25 16:08)
-    ☐ filter by favorite
-      ☐ local
+    ☐ filter by favorite @started(21-11-16 17:11)
+      ✔ local @done(21-11-16 17:11)
       ☐ query for quotes with id given by favorites dict
     ☐ add new quote button
     ✔ empty list handler @done(21-10-25 13:12)
     ☐ pull to refresh to fetch new quotes
-    ☐ Show latest to old order
+    ✔ Show latest to old order @done(21-11-16 17:11)
   ☐ firebase connect
     ✔ api for listing @done(21-10-25 19:39)
     ☐ paginated list of data
       ☐ think about favorites filter when all items are not currently available offline
     ☐ api for adding new
     ☐ use auth for adding new, add new on approval only?
-  ☐ local persist store
+  ✔ local persist store @done(21-11-16 17:11)
     ✔ store favorites @done(21-11-05 23:43)
     ✔ local cache @done(21-11-05 23:44)
-    ☐ record of last fetched
-    ☐ offline first app
+    ✔ record of last fetched @done(21-11-16 17:10)
+    ✔ offline first app @done(21-11-16 17:11)
   ☐ Quote of the day
     ☐ by push notification
     ☐ random order
     ☐ dont show already viewed, until all viewed
     ☐ by widget
   ☐ Deep linking
-    ☐ direct to quote of given id
-    ☐ what if quote of given id is not in local
+    ✔ direct to quote of given id @done(21-11-16 17:10)
+    ✔ what if quote of given id is not in local @done(21-11-16 17:10)
     ☐ 
 
   
@@ -92,9 +105,9 @@ Issues:
   ✔ transparent status bar at android level @done(21-09-29 18:49)
   ✔ QuoteListing car onPress reduce transparency (down by 30%) @done(21-10-25 16:07)
   ✔ error handling for fetching @done(21-11-06 18:40)
-  ☐ Flatlist rendering all instead of just 10
+  ✔ Flatlist rendering all instead of just 10 @done(21-11-16 17:09)
   ☐ improve flatlist performance
   ☐ use thunk for async dispatch
   ☐ Better loader for quotes
   ☐ check out reactotron
-  ☐ deep link user may get only cached data in listing page
+  ✔ deep link user may get only cached data in listing page @done(21-11-16 17:10)
