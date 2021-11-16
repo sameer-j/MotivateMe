@@ -81,4 +81,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default QuoteCard;
+export default React.memo(QuoteCard);
