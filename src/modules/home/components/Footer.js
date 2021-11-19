@@ -11,7 +11,7 @@ function Footer() {
   const navigation = useNavigation();
   return (
     <View style={[styles.footer]}>
-      <TouchableOpacity
+      {/* <TouchableOpacity
         style={styles.roundButton}
         onPress={() => navigation.navigate('QuoteListing')}>
         <Icon name="list" size={iconStyle.size} color={iconStyle.color} />
@@ -27,6 +27,11 @@ function Footer() {
         style={styles.roundButton}
         onPress={() => navigation.navigate('Settings')}>
         <Icon name="settings" size={iconStyle.size} color={iconStyle.color} />
+      </TouchableOpacity> */}
+      <TouchableOpacity
+        style={[styles.roundButton, styles.roundButtonPrimary]}
+        onPress={() => navigation.navigate('QuoteListing')}>
+        <Icon name="list" size={iconStyle.size * 1.2} color={iconStyle.color} />
       </TouchableOpacity>
     </View>
   );
