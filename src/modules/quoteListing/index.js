@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { FlatList, Image, Pressable, StyleSheet, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { SCREEN_HEIGHT } from '../../constants';
 import BackButton from '../../components/BackButton';
 import QuoteListEmptyView from '../../components/QuoteListEmptyView';
 import QuoteListItem from './QuoteListItem';
@@ -70,15 +69,17 @@ const QuoteListing = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { marginTop: 70, flex: 1 },
+  container: {
+    flex: 1,
+  },
   topBar: {
     paddingHorizontal: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   quoteListBody: {
+    paddingTop: 10,
     paddingHorizontal: 20,
-    maxHeight: SCREEN_HEIGHT * 0.9,
     flex: 1,
   },
 });

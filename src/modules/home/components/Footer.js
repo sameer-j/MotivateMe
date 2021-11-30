@@ -31,7 +31,7 @@ function Footer() {
       <TouchableOpacity
         style={[styles.roundButton, styles.roundButtonPrimary]}
         onPress={() => navigation.navigate('QuoteListing')}>
-        <Icon name="list" size={iconStyle.size * 1.2} color={iconStyle.color} />
+        <Icon name="list" size={iconStyle.size * 1.6} color={iconStyle.color} />
       </TouchableOpacity>
     </View>
   );
@@ -40,8 +40,9 @@ function Footer() {
 const styles = StyleSheet.create({
   footer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 30,
+    // justifyContent: 'space-between',
+    justifyContent: 'center',
+    marginBottom: 20,
     alignItems: 'center',
     paddingHorizontal: 20,
   },
@@ -55,8 +56,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   roundButtonPrimary: {
-    width: 70,
-    height: 70,
+    width: 60,
+    height: 60,
   },
 });
 

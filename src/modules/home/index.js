@@ -41,7 +41,7 @@ function Home({ route }) {
   }
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, marginTop: 30 }}>
       <QuoteCardCarousel
         quotes={quotes}
         initialScrollIndex={initialScrollIndex}

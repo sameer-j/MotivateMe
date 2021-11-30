@@ -3,6 +3,7 @@ import SplashScreen from 'react-native-splash-screen';
 import { NavigationContainer } from '@react-navigation/native';
 import { useColorScheme } from 'react-native';
 import { Provider } from 'react-redux';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 import Layout from './components/Layout';
 import Navigator from './navigator';
@@ -38,13 +39,17 @@ const App = () => {
   });
   return (
     <Provider store={store}>
-      <NavigationContainer
-        linking={linking}
-        theme={systemTheme === 'dark' ? DarkTheme : LightTheme}>
-        <Layout>
-          <Navigator />
-        </Layout>
-      </NavigationContainer>
+      <SafeAreaProvider>
+        <NavigationContainer
+          linking={linking}
+          theme={systemTheme === 'dark' ? DarkTheme : LightTheme}>
+          <Layout>
+            <SafeAreaView style={{ flex: 1 }}>
+              <Navigator />
+            </SafeAreaView>
+          </Layout>
+        </NavigationContainer>
+      </SafeAreaProvider>
     </Provider>
   );
 };

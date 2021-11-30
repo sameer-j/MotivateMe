@@ -53,7 +53,6 @@ function QuoteCardCarousel({ quotes, initialScrollIndex }) {
     <FlatList
       data={quotes}
       horizontal
-      style={{ marginTop: 70 }}
       contentContainerStyle={{
         paddingVertical: 16,
         flexGrow: 1,

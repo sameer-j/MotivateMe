@@ -24,6 +24,12 @@ function QuoteCard({ quote }) {
           {quote.quote}
         </Text>
       </View>
+
+      <View style={{ alignItems: 'flex-end' }}>
+        <Text style={{ ...styles.quoteAuthor, color: textColor.regular }}>
+          - {quote.author}
+        </Text>
+      </View>
       <View style={styles.quoteFooter}>
         <Text style={{ ...styles.quoteCategory, color: textColor.link }}>
           #{quote.category.toUpperCase()}
@@ -57,6 +63,10 @@ const styles = StyleSheet.create({
     flexShrink: 1,
     maxHeight: '100%',
   },
+  quoteAuthor: {
+    color: '#757575', // overridden by theme color - inline style
+    justifyContent: 'flex-end', // TODO: check this?
+  },
   quote: {
     fontFamily: 'Roboto',
     fontStyle: 'italic',
@@ -68,7 +78,7 @@ const styles = StyleSheet.create({
     color: '#212121', // overridden by theme color - inline style
   },
   quoteFooter: {
-    marginTop: 30,
+    marginTop: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
