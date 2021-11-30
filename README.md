@@ -1,5 +1,7 @@
 # Quote Delight
 
+[![Build status](https://build.appcenter.ms/v0.1/apps/0ff97df9-4b3c-45c3-ab48-a00f8f2eecb4/branches/release/badge)](https://appcenter.ms)
+
 ## Deep linking
 
 domain prefix's supported:
