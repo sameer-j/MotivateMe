@@ -15,8 +15,6 @@ export const getQuotesFromDB = async () => {
     });
   });
 
-  quotes.map((q) => console.log(q.id, q.quote.slice(0, 25)));
-
   return quotes;
 };
 

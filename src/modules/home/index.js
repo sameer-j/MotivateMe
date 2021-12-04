@@ -18,8 +18,6 @@ function Home({ route }) {
 
   const initialScrollIndex = parseInt(route.params?.id);
 
-  console.log('home re-rendered!');
-
   useEffect(() => {
     if (quotes.length == 0) {
       getData(dispatch);

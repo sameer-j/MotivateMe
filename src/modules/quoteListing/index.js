@@ -12,7 +12,6 @@ const favoriteEmptyIcon = require('../../assets/favoriteEmpty.png');
 const favoriteFilledIcon = require('../../assets/favoriteFilled.png');
 
 const QuoteListing = () => {
-  console.log('rendering quotelisting');
   const dispatch = useDispatch();
   const loading = useSelector(({ quotes }) => quotes.loading);
   const favorites = useSelector(({ userData }) => userData.favorites);

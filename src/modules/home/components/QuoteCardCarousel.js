@@ -6,7 +6,6 @@ import QuoteCard from './QuoteCard';
 const ITEM_WIDTH = Dimensions.get('window').width;
 
 function QuoteCardCarousel({ quotes, initialScrollIndex }) {
-  console.log('QuoteCardCarousel rendered!');
   const pan = useRef(new Animated.ValueXY()).current;
   const renderItem = useCallback(
     ({ item, index }) => (
