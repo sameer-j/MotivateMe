@@ -35,12 +35,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.samrintech.quotedelight",
+    package = "com.quotedelight",
 )
 
 android_resource(
     name = "res",
-    package = "com.samrintech.quotedelight",
+    package = "com.quotedelight",
     res = "src/main/res",
 )
 

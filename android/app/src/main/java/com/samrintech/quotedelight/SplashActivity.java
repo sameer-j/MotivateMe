@@ -1,4 +1,4 @@
-package com.samrintech.quotedelight;
+package com.quotedelight;
 
 import android.content.Intent;
 import android.os.Bundle;

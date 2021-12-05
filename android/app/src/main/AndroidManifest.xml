@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.samrintech.quotedelight">
+  package="com.quotedelight">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

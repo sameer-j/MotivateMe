@@ -1,4 +1,4 @@
-package com.samrintech.quotedelight;
+package com.quotedelight;
 
 import com.facebook.react.ReactActivity;
 import org.devio.rn.splashscreen.SplashScreen; 
