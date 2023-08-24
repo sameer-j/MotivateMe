@@ -5,7 +5,7 @@ import QuoteCard from './QuoteCard';
 
 const ITEM_WIDTH = Dimensions.get('window').width;
 
-function QuoteCardCarousel({ quotes, initialScrollIndex }) {
+function QuoteCardCarousel({ quotes, initialScrollIndex = 0 }) {
   const pan = useRef(new Animated.ValueXY()).current;
   const renderItem = useCallback(
     ({ item, index }) => (
@@ -24,7 +24,8 @@ function QuoteCardCarousel({ quotes, initialScrollIndex }) {
               }),
             },
           ],
-        }}>
+        }}
+      >
         <QuoteCard quote={item} />
       </Animated.View>
     ),
