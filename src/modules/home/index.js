@@ -16,7 +16,7 @@ function Home({ route }) {
 
   const dispatch = useDispatch();
 
-  const initialScrollIndex = parseInt(route.params?.id);
+  const initialScrollIndex = parseInt(route.params?.id ?? 0);
 
   useEffect(() => {
     if (quotes.length == 0) {

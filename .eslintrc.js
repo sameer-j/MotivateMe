@@ -6,7 +6,10 @@ module.exports = {
   },
   plugins: ['prettier'],
   rules: {
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/jsx-filename-extension': [
+      1,
+      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+    ],
     'react/jsx-indent': [2, 2],
     indent: ['error', 2, { ignoredNodes: ['JSXElement'] }],
     'react/prefer-stateless-function': 'off',

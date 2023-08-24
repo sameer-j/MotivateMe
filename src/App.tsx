@@ -15,7 +15,7 @@ const config = {
     Home: {
       path: 'quotes/:id?',
       parse: {
-        id: (id) => `${id}`,
+        id: (id: string) => `${id}`,
       },
     },
     QuoteListing: 'list-all',
@@ -40,9 +40,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <SafeAreaProvider>
-        <NavigationContainer
-          linking={linking}
-          theme={systemTheme === 'dark' ? DarkTheme : LightTheme}>
+        <NavigationContainer linking={linking} theme={LightTheme}>
           <Layout>
             <SafeAreaView style={{ flex: 1 }}>
               <Navigator />
